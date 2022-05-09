@@ -1,0 +1,8 @@
+# www.robotstxt.org/
+
+# Sitemap link
+Sitemap: https://altanna.com/sitemap.xml
+
+# Allow crawling of all content
+User-agent: *
+Allow:

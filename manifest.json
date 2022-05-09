@@ -1,0 +1,136 @@
+{
+  "index-legacy.html": {
+    "file": "assets/index-legacy.0afbcdfa.js",
+    "src": "index-legacy.html",
+    "isEntry": true,
+    "imports": [
+      "_main-legacy.36c0e6a7.js",
+      "_vendor-legacy.dd94a3bd.js"
+    ]
+  },
+  "zero-trust-by-altanna-legacy.html": {
+    "file": "assets/managedService1-legacy.0b580af0.js",
+    "src": "zero-trust-by-altanna-legacy.html",
+    "isEntry": true,
+    "imports": [
+      "_main-legacy.36c0e6a7.js",
+      "_vendor-legacy.dd94a3bd.js"
+    ]
+  },
+  "digital-workspace-by-altanna-legacy.html": {
+    "file": "assets/managedService2-legacy.6e1f3a65.js",
+    "src": "digital-workspace-by-altanna-legacy.html",
+    "isEntry": true,
+    "imports": [
+      "_main-legacy.36c0e6a7.js",
+      "_vendor-legacy.dd94a3bd.js"
+    ]
+  },
+  "entreprise-networking-by-altanna-legacy.html": {
+    "file": "assets/managedService3-legacy.84c1e4f5.js",
+    "src": "entreprise-networking-by-altanna-legacy.html",
+    "isEntry": true,
+    "imports": [
+      "_main-legacy.36c0e6a7.js",
+      "_vendor-legacy.dd94a3bd.js"
+    ]
+  },
+  "expertise-legacy.html": {
+    "file": "assets/expertise-legacy.15fb805e.js",
+    "src": "expertise-legacy.html",
+    "isEntry": true,
+    "imports": [
+      "_main-legacy.36c0e6a7.js",
+      "_vendor-legacy.dd94a3bd.js"
+    ]
+  },
+  "careers-legacy.html": {
+    "file": "assets/careers-legacy.75df5bbc.js",
+    "src": "careers-legacy.html",
+    "isEntry": true,
+    "imports": [
+      "_main-legacy.36c0e6a7.js",
+      "_vendor-legacy.dd94a3bd.js"
+    ]
+  },
+  "_vendor-legacy.dd94a3bd.js": {
+    "file": "assets/vendor-legacy.dd94a3bd.js"
+  },
+  "_main-legacy.36c0e6a7.js": {
+    "file": "assets/main-legacy.36c0e6a7.js",
+    "imports": [
+      "_vendor-legacy.dd94a3bd.js"
+    ]
+  },
+  "vite/legacy-polyfills": {
+    "file": "assets/polyfills-legacy.3567c74b.js",
+    "src": "vite/legacy-polyfills",
+    "isEntry": true
+  },
+  "index.html": {
+    "file": "assets/index.dfe5cecd.js",
+    "src": "index.html",
+    "isEntry": true,
+    "imports": [
+      "_main.d22a6ae0.js",
+      "_vendor.4582d80d.js"
+    ]
+  },
+  "zero-trust-by-altanna.html": {
+    "file": "assets/managedService1.73e342ce.js",
+    "src": "zero-trust-by-altanna.html",
+    "isEntry": true,
+    "imports": [
+      "_main.d22a6ae0.js",
+      "_vendor.4582d80d.js"
+    ]
+  },
+  "digital-workspace-by-altanna.html": {
+    "file": "assets/managedService2.d3ca4738.js",
+    "src": "digital-workspace-by-altanna.html",
+    "isEntry": true,
+    "imports": [
+      "_main.d22a6ae0.js",
+      "_vendor.4582d80d.js"
+    ]
+  },
+  "entreprise-networking-by-altanna.html": {
+    "file": "assets/managedService3.0698cfd7.js",
+    "src": "entreprise-networking-by-altanna.html",
+    "isEntry": true,
+    "imports": [
+      "_main.d22a6ae0.js",
+      "_vendor.4582d80d.js"
+    ]
+  },
+  "expertise.html": {
+    "file": "assets/expertise.8d587676.js",
+    "src": "expertise.html",
+    "isEntry": true,
+    "imports": [
+      "_main.d22a6ae0.js",
+      "_vendor.4582d80d.js"
+    ]
+  },
+  "careers.html": {
+    "file": "assets/careers.7b96c6fa.js",
+    "src": "careers.html",
+    "isEntry": true,
+    "imports": [
+      "_main.d22a6ae0.js",
+      "_vendor.4582d80d.js"
+    ]
+  },
+  "_vendor.4582d80d.js": {
+    "file": "assets/vendor.4582d80d.js"
+  },
+  "_main.d22a6ae0.js": {
+    "file": "assets/main.d22a6ae0.js",
+    "imports": [
+      "_vendor.4582d80d.js"
+    ],
+    "css": [
+      "assets/main.0912ff78.css"
+    ]
+  }
+}
