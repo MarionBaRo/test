@@ -38,10 +38,13 @@ var Supervision = [{
 var patner = [Cybersecurite_Securite, Cybersecurite_Reseau, Stockage_et_sauvegardex, Serveurs, Supervision];
 
 //Affichage des partenaires en animation
-document.write('<section class="mt-9 sm:mt-16 py-8 overflow-hidden"> \n<div class="gallery-wrapper flex gap-10 py-8"> \n<div class="gallery flex gap-10 overflow-y-visible"></div>\n');
+document.write('<section class="mt-9 sm:mt-16 py-8 overflow-hidden"> \n');
+document.write('<div class="gallery-wrapper flex gap-10 py-8"> \n');
+document.write('<div class="gallery flex gap-10 overflow-y-visible">\n');
+document.write('</div>\n');
 
 for (i=0;i<patner.length;i++){
-    document.write('<div class="gallery-grid grid grid-cols-', patner[i].length/2, '-gallery gap-10">\n');
+    document.write('<div class="gallery-grid grid grid-cols-', (patner[i].length)/2, '-gallery gap-10">\n');
     //Image illustrant la catégorie :
     document.write('<div class="gallery-grid-column">\n');
     document.write('<div class="gallery-grid-item h-40 w-40 bg-gradient-to-t relative flex items-center relative" data-category="',patner[i][0].cat,'">\n');
@@ -60,7 +63,7 @@ for (i=0;i<patner.length;i++){
         document.write('<div class="gallery-grid-column">\n');
         document.write('<div class="gallery-grid-item h-40 w-40 bg-gradient-to-t from-gray-100 to-gray-50 border border-gray-100 relative flex items-center">\n');
         document.write('<div class="gallery-img-wrapper w-full p-5">\n');
-        document.write('<img class="max-h-16 mx-auto" loading="lazy" width="200" height="200" src="', patner[i][0].src,'" alt="', patner[i][0].alt,'" title="', patner[i][0].title,'"/>\n');
+        document.write('<img class="max-h-16 mx-auto" loading="lazy" width="200" height="200" src="', patner[i][j].src,'" alt="', patner[i][j].alt,'" title="', patner[i][j].title,'"/>\n');
         document.write('<div class="sr-only">',patner[i][j].nom ,'</div>\n');
         document.write('</div>\n');
         document.write('<div class="absolute -bottom-3 -left-3 h-6 w-6 bg-gradient-to-t z-10"\n');
@@ -70,4 +73,8 @@ for (i=0;i<patner.length;i++){
     }
     document.write('</div>\n');
 };
-document.write('</div>\n</div>\n<p class="-mt-3 text-center text-gray-400 italic">Nos partenaires IT les plus reconnus dans leurs domaines.</p>\n</section>\n');
+document.write('</div>\n');
+document.write('<div class="gallery flex gap-10 overflow-y-visible">\n');
+document.write('</div>\n');
+document.write('<p class="-mt-3 text-center text-gray-400 italic">Nos partenaires IT les plus reconnus dans leurs domaines.</p>\n');
+document.write('</section>\n');
