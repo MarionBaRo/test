@@ -66,6 +66,7 @@ for (i=0;i<patner.length;i++){
         document.write('<div class="absolute -bottom-3 -left-3 h-6 w-6 bg-gradient-to-t z-10"\n');
         document.write('</div>\n');
         document.write('</div>\n')
+        document.write('</div>\n')
     }
     document.write('</div>\n');
 };
