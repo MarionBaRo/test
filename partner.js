@@ -41,7 +41,6 @@ var patner = [Cybersecurite_Securite, Cybersecurite_Reseau, Stockage_et_sauvegar
 document.write('<section class="mt-9 sm:mt-16 py-8 overflow-hidden"> \n');
 document.write('<div class="gallery-wrapper flex gap-10 py-8"> \n');
 document.write('<div class="gallery flex gap-10 overflow-y-visible">\n');
-document.write('</div>\n');
 
 for (i=0;i<patner.length;i++){
     document.write('<div class="gallery-grid grid grid-cols-', (patner[i].length)/2, '-gallery gap-10">\n');
@@ -74,7 +73,6 @@ for (i=0;i<patner.length;i++){
     document.write('</div>\n');
 };
 document.write('</div>\n');
-document.write('<div class="gallery flex gap-10 overflow-y-visible">\n');
 document.write('</div>\n');
 document.write('<p class="-mt-3 text-center text-gray-400 italic">Nos partenaires IT les plus reconnus dans leurs domaines.</p>\n');
 document.write('</section>\n');
