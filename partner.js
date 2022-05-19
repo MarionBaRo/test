@@ -49,13 +49,15 @@ for (i=0;i<patner.length;i++){
     document.write('<div class="gallery-grid-item h-40 w-40 bg-gradient-to-t relative flex items-center relative" data-category="',patner[i][0].cat,'">\n');
     document.write('<div class="gallery-img-wrapper relative h-full w-full px-5 flex justify-center">\n');
     document.write('<img class="object-cover absolute top-0 left-0 h-full w-full opacity-60" width="200" height="200" src="',patner[i][0].src,'" alt="',patner[i][0].alt,'" title="',patner[i][0].title,'">\n');
-    document.write('<div class="block text-white text-center text-sm self-end mt-2 leading-4 mb-2 font-bold	">',patner[i][0].nom,'</div>\n');
+    document.write('<div class="block text-white text-center text-sm self-end mt-2 leading-4 mb-2 font-bold	">',patner[i][0].nom,'\n');
+    document.write('</div>\n');
     document.write('</div>\n');
     document.write('<div class="absolute -top-5 -right-5 h-10 w-10 bg-gray-900 z-10 flex items-center justify-center">\n');
     document.write(`<img src="logo-white.svg" loading="lazy"  class="h-6 w-6" width="50" height="50" alt="Altanna - Logo décoratif" title="Logo d'Altanna"/>\n`);
     document.write('</div>\n');
     document.write('</div>\n');
     document.write('</div>\n');
+
 
     //Partenaire
     for (j=1;j<patner[i].length;j++){
@@ -65,6 +67,7 @@ for (i=0;i<patner.length;i++){
         document.write('<img class="max-h-16 mx-auto" loading="lazy" width="200" height="200" src="', patner[i][j].src,'" alt="', patner[i][j].alt,'" title="', patner[i][j].title,'"/>\n');
         document.write('<div class="sr-only">',patner[i][j].nom ,'</div>\n');
         document.write('</div>\n');
+        document.write('</div>\n')
         document.write('<div class="absolute -bottom-3 -left-3 h-6 w-6 bg-gradient-to-t z-10"\n');
         document.write('</div>\n');
         document.write('</div>\n')
