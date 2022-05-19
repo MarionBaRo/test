@@ -1,8 +1,4 @@
-/*
-{
-    cat : ,nom : ,title : ,alt : ,src : }
-*/
-
+//Liste des partenaires :
 var Cybersecurite_Securite = [{
     cat : "security", nom : "Cybersécurité", title : "Altanna - Cybersécurité", alt : "Altanna - Objet 3d, coffre cadenas illustrant les services de cybersécurité", src : "categories/security.png"}, {
     cat : "security", nom : "Fortinet", title : "Altanna, partenaire de Fortinet", alt : "Altanna - Logo de Fortinet", src : "partners/fortinet.svg"},{
@@ -39,4 +35,38 @@ var Supervision = [{
     cat : "supervision-production",nom : "Kubernetes",title : "Altanna, partenaire de Kubernetes",alt : "Altanna - Logo de Kubernetes",src : "partners/Kubernetes.svg"},{
     cat : "supervision-production",nom : "Ansible",title : "Altanna, partenaire de Ansible",alt : "Altanna - Logo de Ansible",src : "partners/Ansible.svg"}];
 
+var patner = [Cybersecurite_Securite, Cybersecurite_Reseau, Stockage_et_sauvegardex, Serveurs, Supervision];
 
+//Affichage des partenaires en animation
+document.write('<section class="mt-9 sm:mt-16 py-8 overflow-hidden"> \n<div class="gallery-wrapper flex gap-10 py-8"> \n<div class="gallery flex gap-10 overflow-y-visible"></div>\n');
+
+for (i=0;i<patner.length;i++){
+    document.write('<div class="gallery-grid grid grid-cols-', patner[i].length/2, '-gallery gap-10">\n');
+    //Image illustrant la catégorie :
+    document.write('<div class="gallery-grid-column">\n');
+    document.write('<div class="gallery-grid-item h-40 w-40 bg-gradient-to-t relative flex items-center relative" data-category="',patner[i][0].cat,'">\n');
+    document.write('<div class="gallery-img-wrapper relative h-full w-full px-5 flex justify-center">\n');
+    document.write('<img class="object-cover absolute top-0 left-0 h-full w-full opacity-60" width="200" height="200" src="',patner[i][0].src,'" alt="',patner[i][0].alt,'" title="',patner[i][0].title,'">\n');
+    document.write('<div class="block text-white text-center text-sm self-end mt-2 leading-4 mb-2 font-bold	">',patner[i][0].nom,'</div>\n');
+    document.write('</div>\n');
+    document.write('<div class="absolute -top-5 -right-5 h-10 w-10 bg-gray-900 z-10 flex items-center justify-center">\n');
+    document.write(`<img src="logo-white.svg" loading="lazy"  class="h-6 w-6" width="50" height="50" alt="Altanna - Logo décoratif" title="Logo d'Altanna"/>\n`);
+    document.write('</div>\n');
+    document.write('</div>\n');
+    document.write('</div>\n');
+
+    //Partenaire
+    for (j=1;j<patner[i].length;j++){
+        document.write('<div class="gallery-grid-column">\n');
+        document.write('<div class="gallery-grid-item h-40 w-40 bg-gradient-to-t from-gray-100 to-gray-50 border border-gray-100 relative flex items-center">\n');
+        document.write('<div class="gallery-img-wrapper w-full p-5">\n');
+        document.write('<img class="max-h-16 mx-auto" loading="lazy" width="200" height="200" src="', patner[i][0].src,'" alt="', patner[i][0].alt,'" title="', patner[i][0].title,'"/>\n');
+        document.write('<div class="sr-only">',patner[i][j].nom ,'</div>\n');
+        document.write('</div>\n');
+        document.write('<div class="absolute -bottom-3 -left-3 h-6 w-6 bg-gradient-to-t z-10"\n');
+        document.write('</div>\n');
+        document.write('</div>\n')
+    }
+    document.write('</div>\n');
+};
+document.write('</div>\n</div>\n<p class="-mt-3 text-center text-gray-400 italic">Nos partenaires IT les plus reconnus dans leurs domaines.</p>\n</section>\n');
