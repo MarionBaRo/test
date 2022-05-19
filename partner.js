@@ -78,3 +78,4 @@ document.write('<div class="gallery flex gap-10 overflow-y-visible">\n');
 document.write('</div>\n');
 document.write('<p class="-mt-3 text-center text-gray-400 italic">Nos partenaires IT les plus reconnus dans leurs domaines.</p>\n');
 document.write('</section>\n');
+
