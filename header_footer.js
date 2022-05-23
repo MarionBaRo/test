@@ -328,7 +328,8 @@ function Footer (){
         document.write(`<div class="flex space-x-3"> \
         <p class="text-gray-500">© 2022 Altanna</p> \
         </div> \
-        <div class="flex space-x-3">`);
+        <div class="flex space-x-3"> _
+        <p>`);
 
         //Adresse :
         for(i = 0 ; i < Adresse.length; i++){
@@ -336,7 +337,8 @@ function Footer (){
                                 `, Adresse[i].lieu,` </a>`);
         }
 
-        document.write(`</div> \
+        document.write(`</p> \
+            </div> \
         </div> \
     </div> \
 </footer>`);
