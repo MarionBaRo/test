@@ -334,7 +334,7 @@ function Footer (){
         //Adresse :
         for(i = 0 ; i < Adresse.length; i++){
             document.write(`<a class="underline text-gray-600 hover:text-gray-500" target="_blank" rel="noreferrer" href="`, Adresse[i].lien,`"> \
-                                `, Adresse[i].lieu,` </a>`);
+                                `, Adresse[i].lieu,` </a><br>`);
         }
 
         document.write(`</p> \
