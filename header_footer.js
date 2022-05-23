@@ -37,7 +37,7 @@ function Header(){
             </div> ');
 
         //A quoi ça sert ?
-        document.write('<div class="-mr-2 -my-2 md:hidden"> \
+        /*document.write('<div class="-mr-2 -my-2 md:hidden"> \
                 <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 \
                 hover:text-gray-500 hover:bg-gray-100 focus:outline-none \
                 " @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">\
@@ -47,7 +47,7 @@ function Header(){
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> \
                     </svg> \
                 </button> \
-            </div> ');
+            </div> '); */
         
         //Boutons du menu
         document.write(`<div class="hidden md:flex items-center justify-end"> \
@@ -157,95 +157,6 @@ function Header(){
     </div>');' \ 
 </header> `);
 };
-
-/*
-<!--Mobile menu--> \
-    <div x-show="open" \
-         x-transition:enter="duration-200 ease-out" \
-         x-transition:enter-start="opacity-0 scale-95" \
-         x-transition:enter-end="opacity-100 scale-100" \
-         x-transition:leave="duration-100 ease-in" \
-         x-transition:leave-start="opacity-100 scale-100" \
-         x-transition:leave-end="opacity-0 scale-95" \
-         x-description="Mobile menu, show/hide based on mobile menu state." \
-         class="z-10 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden" \
-         x-ref="panel" \
-         @click.away="open = false" \
-         style="display: none;"> \
-        <div class="rounded-lg shadow-lg bg-white"> \
-            <div class="px-5"> \
-                <div class="flex items-center justify-between"> \
-                    <div> \
-                        <img  alt="logo Altanna" src="logo-with-text.svg"/> \
-                    </div> \
-                    <div class="-mr-2"> \
-                        <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none" @click="toggle"> \
-                            <span class="sr-only">Close menu</span> \
-                            <svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"> \
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path> \
-                            </svg> \
-                        </button> \
-                    </div> \
-                </div> \
-                <div class="mt-6"> \
-                    <nav class="grid gap-y-1"> \
-                        <a href="./index.html" class="-mx-3 p-3 py-2 flex items-center  hover:bg-gray-50"> \
-                            Accueil \
-                        </a> \
-                        <a href="./expertise.html" class="-mx-3 p-3 py-2 flex items-center  hover:bg-gray-50"> \
-                           Notre expertise \
-                        </a> \
-                    </nav> \
-                </div> \
-                <div class="mt-4"> \
-                    <p class="text-xs font-medium uppercase text-gray-500 tracking-wid">Nos services managés</p> \
-                    <div class="grid gap-y-1 ml-4"> \
-                        <a class="-ml-4 p-3 py-2 text-base bg-gray-100 text-gray-700 hover:bg-gray-200" \
-                           href="./zero-trust-by-altanna.html"> \
-                        <span class="flex items-center relative"> \
-                            <span class="h-3 w-3 bg-gradient-to-t relative flex items-center relative" data-category="security"> \
-                            </span> \
-                            <span class="text-xs block text-gray-400 ml-1">CyberSécurité</span> \
-                        </span> \
-                            <span class="block leading-4">Sécurity Zero trust by Altanna</span> \
-                        </a> \
-                        <a class="-ml-4 p-3 py-2 text-base bg-gray-100 text-gray-700 hover:bg-gray-200" \
-                           href="./entreprise-networking-by-altanna.html"> \
-                                 <span class="flex items-center relative"> \
-                                    <span class="h-3 w-3 bg-gradient-to-t relative flex items-center relative" data-category="network"> \
-                                    </span> \
-                                    <span class="text-xs block text-gray-400 ml-1">Réseaux</span> \
-                                </span> \
-                            <span class="block leading-4">Entreprise Networking by Altanna</span> \
-                        </a> \
-                        <a class="-ml-4 p-3 py-2 text-base bg-gray-100 text-gray-700 hover:bg-gray-200" \
-                           href="./digital-workspace-by-altanna.html"> \
-                        <span class="flex items-center relative"> \
-                            <span class="h-3 w-3 bg-gradient-to-t relative flex items-center relative" data-category="infrastructure-cloud"> \
-                            </span> \
-                            <span class="text-xs block text-gray-400 ml-1">Infrastrucure</span> \
-                        </span> \
-                            <span class="block leading-4">Digital workspace by Altanna</span> \
-                        </a> \
-                    </div> \
-                </div> \
-                <div class="grid gap-y-4 pb-4 mt-4"> \
-                    <button @click="open = false; openContactModal = true" \
-                            class="btn btn-primary block w-full text-center" \
-                            type="button"> \
-                        Nous contacter \
-                    </button> \
-                    <a class="btn btn-white block w-full text-center" \
-                       href="./careers.html" \
-                    > \
-                        Nous rejoindre \
-                    </a> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-     */
-
 
 function Footer (){
     document.write(`<footer aria-labelledby="footer-heading" class="w-full relative bg-gray-100 border-t border-gray-200"> \
