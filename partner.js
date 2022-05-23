@@ -1,5 +1,9 @@
 function Patner(){
-    //Liste des partenaires :
+    /*Liste des partenaires :
+      Attention : le nombre de partenaire doit toujours être paire
+      Si une catégorie est rajouté, ne pas oublier de la mettre dans la liste patner
+    */
+
     var Cybersecurite_Securite = [{
         cat : "security", nom : "Cybersécurité", title : "Altanna - Cybersécurité", alt : "Altanna - Objet 3d, coffre cadenas illustrant les services de cybersécurité", src : "categories/security.png"}, {
         cat : "security", nom : "Fortinet", title : "Altanna, partenaire de Fortinet", alt : "Altanna - Logo de Fortinet", src : "partners/fortinet.svg"},{
