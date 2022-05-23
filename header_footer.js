@@ -326,7 +326,9 @@ function Footer (){
             </div> `);
         
         document.write(`<div class="flex space-x-3"> \
-        <p class="text-gray-500">© 2022 Altanna</p>`);
+        <p class="text-gray-500">© 2022 Altanna</p> \
+        </div> \
+        <div class="flex space-x-3">`);
 
         //Adresse :
         for(i = 0 ; i < Adresse.length; i++){
