@@ -1,0 +1,22 @@
+.w-full{
+    width:100%
+}.relative{
+    position:relative
+}.bg-gray-100{
+    --tw-bg-opacity: 1;
+    background-color:rgba(245,245,245,var(--tw-bg-opacity))
+}.bg-gray-500{
+    --tw-bg-opacity: 1;
+    background-color:rgba(115,115,115,var(--tw-bg-opacity))
+}.bg-gray-800{
+    --tw-bg-opacity: 1;
+    background-color:rgba(38,38,38,var(--tw-bg-opacity))
+}.bg-gray-900{
+    --tw-bg-opacity: 1;
+    background-color:rgba(23,23,23,var(--tw-bg-opacity))
+}.border-gray-200{
+    --tw-border-opacity: 1;
+    border-color:rgba(229,229,229,var(--tw-border-opacity))
+}.border-t{
+    border-top-width:1px
+}
