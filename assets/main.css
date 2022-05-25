@@ -24,7 +24,8 @@
 }b,strong{
   font-weight:bolder
 }code,kbd,samp,pre{
-  font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;font-size:1em
+  font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
+  font-size:1em
 }small{
   font-size:80%
 }sub,sup{

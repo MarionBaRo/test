@@ -58,9 +58,19 @@
     <link rel="modulepreload" href="./assets/main.d22a6ae0.js">
     <link rel="modulepreload" href="./assets/vendor.js">
     <link rel="stylesheet" href="./assets/main.css">
-    <script type="module">!function(){try{new Function("m","return import(m)")}catch(o){console.warn("vite: loading legacy build because dynamic import is unsupported, syntax error above should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}}();</script>
+    <script type="module">
+        !function(){
+            try{
+                new Function("m","return import(m)")
+            }catch(o){
+                console.warn("vite: loading legacy build because dynamic import is unsupported, syntax error above should be ignored");
+                var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");
+                n.src=e.src,n.onload=function(){
+                    System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))
+                },document.body.appendChild(n)
+            }}();
+        </script>
   </head>
-
 <body class="use-animate"
       x-data="{ openContactModal: false }"
       :class="{'overflow-y-hidden': openContactModal === true}">
@@ -69,6 +79,7 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX8K9BD"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
 <!-- / Header nav -->
 <header class="z-40 relative bg-white"
      x-data="Components.popover({ open: false, focus: true })"

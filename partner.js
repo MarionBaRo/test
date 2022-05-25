@@ -1,4 +1,4 @@
-function Patner(){
+function Partner(){
     /*Liste des partenaires :
       Attention : le nombre de partenaire doit toujours être paire
       Si une catégorie est rajouté, ne pas oublier de la mettre dans la liste patner
