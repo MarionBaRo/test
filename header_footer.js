@@ -70,6 +70,7 @@ function Header(){
                             for (var j=0; j < Bouton_d[i].liste.length; j++){
                                 document.write(`<li><a class="block px-4 py-2 text-sm text-gray-700" id="dropdown-item-`, j,`" href="`,Bouton_d[i].liste[j].href,`">`,Bouton_d[i].liste[j].nom,`</a></li>`);
                             }
+                        
                         document.write(`</ul>
                     </div>`);
                 }

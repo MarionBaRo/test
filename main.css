@@ -1,3 +1,50 @@
+/* Affichage générale */
+html{
+    -moz-tab-size:4;
+    -o-tab-size:4;
+    tab-size:4;
+    line-height:1.15;
+    -webkit-text-size-adjust:100%;
+}body{
+    margin:0;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+}
+
+/* Affichage de l'en-tête */
+header{
+    z-index:40;
+    position:relative;
+    --tw-bg-opacity: 1;
+    background-color:rgba(255,255,255,var(--tw-bg-opacity));
+}header .bandeau{
+    max-width:80rem;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:1rem;
+    padding-right:1rem;
+    padding-top:1.5rem;
+    padding-bottom:1.5rem;
+    display:flex;
+    border-bottom-width:1px;
+    --tw-border-opacity: 1;
+    border-color:rgba(229,229,229,var(--tw-border-opacity));
+    align-items:center;
+    justify-content:space-between;
+}
+
+.sous{
+    display : none;
+  }
+  .deroulant:hover .sous {
+    display: block;
+    outline:2px solid transparent;
+    outline-offset:2px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center
+  }
+
+
 
 /* Affichage du pied de page */
 footer{
