@@ -1,3 +1,17 @@
+
+/* Affichage du pied de page */
+footer{
+    width:100%;
+    position:relative;
+    --tw-bg-opacity: 1;
+    background-color:rgba(245,245,245,var(--tw-bg-opacity));
+    border-top-width:1px;
+    --tw-border-opacity: 1;
+    border-color:rgba(229,229,229,var(--tw-border-opacity))
+}
+
+
+
 .w-full{
     width:100%
 }.relative{
@@ -73,9 +87,9 @@
     padding-left:2rem;padding-right:2rem
 }.xl\:grid{
     display:grid
-  }.xl\:grid-cols-4{
+}.xl\:grid-cols-4{
     grid-template-columns:repeat(4,minmax(0,1fr))
-  }.xl\:gap-8{
+}.xl\:gap-8{
     gap:2rem
 }.grid{
     display:grid
