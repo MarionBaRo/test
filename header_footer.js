@@ -1,7 +1,7 @@
-var Acceuil = {nom : "Acceuil", href : "index.html"};
-var Expertise = {nom : "Expertise", href : "expertise.html"};
-var Contact = {nom : "Nous Contacter", href : ""};
-var Rejoindre = {nom : "Nous Rejoindre", href : "./careers.html"};
+var Acceuil = {nom : "Acceuil", href : "index.html" , id : ""};
+var Expertise = {nom : "Expertise", href : "expertise.html" , id : ""};
+var Contact = {nom : "Nous Contacter", href : "", id : "contact"};
+var Rejoindre = {nom : "Nous Rejoindre", href : "./careers.html" , id : ""};
 
 var Liste = [Acceuil, Expertise, Contact, Rejoindre];
 var Bouton = [Expertise];
@@ -12,7 +12,7 @@ var Service = [{
     nom : "Entreprise Networking", href : "./entreprise-networking.html", cat : "network", type : "Réseau" }
 ];
 var Bouton_d = [{
-    nom : "Services Managés", liste : Service}
+    nom : "Services managés", liste : Service, fin : "Pour un service sur mesure, contactez nos conseillers."}
 ];
 
 var Adresse = [{
@@ -69,8 +69,7 @@ function Header(){
                                                 <span class="block leading-4">`, Bouton_d[i].liste[j].nom,`</span> \
                                             </a></li>`);
                                         }
-                                        document.write(`<span class="block leading-4 px-4 py-2 text-sm text-gray-400 border-t"> \
-                                        Pour un service sur mesure, contactez nos conseillers. \
+                                        document.write(`<span class="block leading-4 px-4 py-2 text-sm text-gray-400 border-t"> `, Bouton_d[i].fin,`\
                                         </span> \
                                     </div> \
                                 </div> \
@@ -83,7 +82,7 @@ function Header(){
                         href="careers.html">Nous rejoindre</a> \
                     <div class="flex-grow" @keydown.window.escape="openContactModal = false"> \
                         <!-- Modal trigger--> \
-                        <button @click="openContactModal = true" \
+                        <button onclick="document.getElementById('`, Contact.id,`').style.display='block'" \
                             class="btn btn-primary inline-flex" \
                             type="button"> \
                             Nous contacter \
@@ -96,7 +95,7 @@ function Header(){
 };
 
 function Footer (){
-    document.write(`<footer aria-labelledby="footer-heading"> \
+    document.write(`<footer aria-labelledby="footer-heading" class="w-full relative bg-gray-100 border-t border-gray-200"> \
     <div class="absolute left-1/2 top-0 transform -translate-y-1/2 -translate-x-1/2 h-16 w-16 border border-gray-200 bg-gray-900 flex items-center justify-center"> \
         <img src="logo-white.svg"  height="25" width="25" alt="Altanna - Logo" title="Logo d'altanna"/> \
     </div> \
@@ -116,7 +115,7 @@ function Footer (){
                         document.write(`<li> \
                         <a class="text-base text-gray-500 hover:text-gray-900"`);
                         if (Liste[i].href == "") {
-                            document.write(`@click="openContactModal = true"`);
+                            document.write(`onclick="document.getElementById('`, Liste[i].id,`').style.display='block'"`);
                         }else {
                             document.write(`href="`, Liste[i].href);   
                         } 
@@ -191,3 +190,153 @@ function Footer (){
     </div> \
 </footer>`);
 };
+
+function Modal () {
+    document.write(`<div id = "`, Contact.id,`" class="fixed z-50 inset-0 overflow-y-auto"
+    aria-labelledby="modal-title" \
+    aria-modal="true" \
+    style="display:none;" \
+    x-ref="dialog"> \
+        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"> \
+            <span aria-hidden="true" \
+                class="hidden sm:inline-block sm:align-middle sm:h-screen"> \
+                                    </span> \
+            <div class="inline-block align-bottom bg-gradient-to-b to-gray-800 from-gray-900 pt-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-xl sm:w-full" \
+                x-description="Modal panel, show/hide based on modal state." \
+                x-show="openContactModal" \
+                x-transition:enter="ease-out duration-300" \
+                x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" \
+                x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" \
+                x-transition:leave="ease-in duration-200" \
+                x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" \
+                x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"> \
+                <div> \
+                    <div class="sm:block absolute top-0 right-0 pt-4 pr-4"> \
+                        <button type="button" class="text-gray-50 hover:text-white focus:outline-none" @click="openContactModal = false"> \
+                            <span class="sr-only">Fermer</span> \
+                            <svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"> \
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path> \
+                            </svg> \
+                        </button> \
+                    </div> \
+                    <div class="mx-auto flex items-center justify-center h-24 w-24 rounded-full bg-gray-800"> \
+                        <img class="h12 w-12"  height="25" width="25" src="logo-white.svg"> \
+                    </div> \
+                    <div class="mt-3 sm:mt-5"> \
+                        <h3 class="text-2xl leading-6 font-bold text-gray-100 text-center" \
+                            id="modal-title"> \
+                            Contacter un expert Altanna \
+                        </h3> \
+                        <div class="mt-2"> \
+                            <p class="text-sm text-gray-400 text-center"> \
+                                Nous répondons aux demandes de contact sous 48h. \
+                            </p> \
+                        </div> \
+                        <form class="space-y-8" action="send.php" method="post" data-ajaxform data-container="formResult"> \
+                            <input type="hidden" name="actionform" value="contact" /> \
+                            <div class="pt-8 p-9 "> \
+                                <div class="mt-6 grid grid-cols-1 gap-y-2 gap-x-4 sm:grid-cols-12"> \
+                                    <div class="sm:col-span-6"> \
+                                        <div class="relative z-0 w-full mb-5"> \
+                                            <input class="floating" name="first-name" placeholder=" " type="text"> \
+                                            <label class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500" for="first-name"> \
+                                                Votre prénom \
+                                            </label> \
+                                            <span class="text-sm text-red-600 hidden" data-form-helpers> \
+                                                La saisie d'un prénom est obligatoire. \
+                                            </span> \
+                                        </div> \
+                                    </div> \
+                                    <div class="sm:col-span-6"> \
+                                        <div class="relative z-0 w-full mb-5"> \
+                                            <input class="floating" name="last-name" placeholder=" " type="text"> \
+                                            <label class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500" for="last-name"> \
+                                                Votre nom \
+                                            </label> \
+                                            <span class="text-sm text-red-600 hidden" data-form-helpers> \
+                                                La saisie d'un nom est obligatoire. \
+                                            </span> \
+                                        </div> \
+                                    </div> \
+                                    <div class="sm:col-span-6"> \
+                                        <div class="relative z-0 w-full mb-5"> \
+                                            <input class="floating" name="email" placeholder=" " type="email"> \
+                                            <label class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500" for="email"> \
+                                                Votre email \
+                                            </label> \
+                                            <span class="text-sm text-red-600 hidden" data-form-helper> \
+                                                La saisie d'un email est obligatoire. \
+                                            </span> \
+                                        </div> \
+                                    </div> \
+                                    <div class="sm:col-span-6"> \
+                                        <div class="relative z-0 w-full mb-5"> \
+                                            <input class="floating" name="phone" placeholder=" " type="text"> \
+                                            <label class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500" for="phone"> \
+                                                Votre téléphone \
+                                            </label> \
+                                            <span class="text-sm text-red-600 hidden" data-form-helper> \
+                                                La saisie d'un numéro téléphone est obligatoire. \
+                                            </span> \
+                                        </div> \
+                                    </div> \
+                                    <div class="sm:col-span-12"> \
+                                        <div class="relative z-0 w-full mb-5"> \
+                                            <input class="floating" name="address" placeholder=" " type="text"> \
+                                            <label class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500" for="address"> \
+                                                Votre adresse \
+                                            </label> \
+                                            <span class="text-sm text-red-600 hidden" data-form-helper> \
+                                                La saisie d'un numéro d'une adresse est obligatoire. \
+                                            </span> \
+                                        </div> \
+                                    </div> \
+                                    <div class="sm:col-span-8"> \
+                                        <div class="relative z-0 w-full mb-5"> \
+                                            <input class="floating" name="city" placeholder=" " type="text"> \
+                                            <label class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500" for="city"> \
+                                                Ville \
+                                            </label> \
+                                            <span class="text-sm text-red-600 hidden" data-form-helper> \
+                                                La saisie d'une ville est obligatoire \
+                                            </span> \
+                                        </div> \
+                                    </div> \
+                                    <div class="sm:col-span-4"> \
+                                        <div class="relative z-0 w-full mb-5"> \
+                                            <input class="floating" name="postal-code" placeholder=" " type="text"> \
+                                            <label class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500" for="postal-code"> \
+                                                Code postal \
+                                            </label> \
+                                            <span class="text-sm text-red-600 hidden" data-form-helper> \
+                                                La saisie d'un code postal est obligatoire. \
+                                            </span> \
+                                        </div> \
+                                    </div> \
+                                    <div class="sm:col-span-12"> \
+                                        <label class="mt-1 block text-base text-gray-500" for="contexte"> \
+                                            Votre projet, votre entreprise \
+                                        </label> \
+                                        <div class="mt-2"> \
+                                            <textarea class="max-w-lg shadow-sm block w-full text-gray-50  sm:text-sm border bg-gray-800 border-gray-700" \
+                                                id="contexte" name="contexte" \
+                                                rows="8"></textarea> \
+                                        </div> \
+                                        <span class="mt-1 block text-xs text-gray-500">Décrivez les éléments clés qui nous permettrons de préparer au mieux notre future rencontre.</span> \
+                                    </div> \
+                                    <!-- Resultat du formulaire --> \
+                                    <div class="sm:col-span-12" id="formResult"></div> \
+                                </div> \
+                            </div> \
+                            <div class="mt-8 p-9"> \
+                                <button class="inline-flex justify-center w-full btn btn-white" data-confetti id="submit_form" type="submit"> \
+                                    Envoyer \
+                                </button> \
+                            </div> \
+                        </form> \
+                    </div> \
+                </div> \
+            </div> \
+        </div> \
+    </div>`);
+}

@@ -10,23 +10,6 @@
   align-items:center
 }
 
-/* Affichage du pied de page */
-footer{
-  width:100%;
-  position:relative;
-  --tw-bg-opacity: 1;
-  background-color:rgba(245,245,245,var(--tw-bg-opacity));
-  border-top-width:1px;
-  --tw-border-opacity: 1;
-  border-color:rgba(229,229,229,var(--tw-border-opacity))
-}
-
-
-
-
-
-
-
 
 #app{
   font-family:Avenir,Helvetica,Arial,sans-serif;
