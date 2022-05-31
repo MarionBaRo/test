@@ -22,7 +22,7 @@ var Adresse = [{
 ];
 
 function Header(){
-    document.write('<z-40 relative bg-white \
+    document.write('<header class="z-40 relative bg-white" \
     x-data="Components.popover({ open: false, focus: true })" \
     x-init="init()" \
     @keydown.escape="onEscape" \
