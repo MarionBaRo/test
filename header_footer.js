@@ -58,7 +58,7 @@ function Header(){
                                         </svg> \
                                     </a> \
                                 </div> \
-                                <div class ="sous origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"> \
+                                <div class ="sous origin-top-right absolute right-0 mt-1 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"> \
                                     <div class="py-1" role="none">`);
                                         for (var j=0; j < Bouton_d[i].liste.length; j++){
                                             document.write(`<a class="block px-4 py-2 text-sm text-gray-700" href="`,Bouton_d[i].liste[j].href,`"> \
