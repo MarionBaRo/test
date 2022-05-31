@@ -22,15 +22,14 @@ var Adresse = [{
 ];
 
 function Header(){
-    document.write('<header class="z-40 relative bg-white" \
+    document.write('<header \
     x-data="Components.popover({ open: false, focus: true })" \
     x-init="init()" \
     @keydown.escape="onEscape" \
     @close-popover-group.window="onClosePopoverGroup">');
 
     //Desktop menu
-    document.write('<div class="max-w-7xl mx-auto px-4 sm:px-6"> \
-        <div class="flex justify-between items-center border-b border-gray-200 py-6">');
+    document.write('<div class="bandeau">');
 
             //Logo Altanna 
             document.write('<div class="flex justify-start "> \
@@ -41,7 +40,7 @@ function Header(){
             </div> ');
 
             //A quoi ça sert ?
-            document.write('<div class="-mr-2 -my-2 md:hidden"> \
+            /*document.write('<div class="-mr-2 -my-2 md:hidden"> \
                     <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 \
                     hover:text-gray-500 hover:bg-gray-100 focus:outline-none \
                     " @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">\
@@ -51,7 +50,7 @@ function Header(){
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> \
                         </svg> \
                     </button> \
-                </div> '); 
+                </div> '); */
             
             //Boutons simple
             for (var i=0; i < Bouton.length; i++){
@@ -152,7 +151,7 @@ function Header(){
                         Nous contacter \
                     </button> \
                 </div> \
-            </div> \
+            
         </div> \
     </div> \ 
 </header> `);
