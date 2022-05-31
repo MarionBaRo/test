@@ -50,12 +50,13 @@ function Header(){
                         for (var i=0; i < Bouton_d.length; i++){
                             document.write(`<div class = "relative hidden sm:inline-block text-left deroulant"> \
                                 <div> \
-                                    <a class="outline-none inline-flex justify-center items-center w-full btn btn-transparent">`, Bouton_d[i].nom,` </a> \
+                                    <a class="outline-none inline-flex justify-center items-center w-full btn btn-transparent">`, Bouton_d[i].nom,`  \
                                         <svg aria-hidden="true" class="-mr-1 ml-1 h-5 w-5">\
                                             <path clip-rule="evenodd" \
                                             d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" \
                                             fill-rule="evenodd"></path> \
                                         </svg> \
+                                    </a> \
                                 </div> \
                                 <div class ="sous origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"> \
                                     <div class="py-1" role="none">`);
