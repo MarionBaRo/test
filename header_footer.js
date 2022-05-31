@@ -29,7 +29,8 @@ function Header(){
     @close-popover-group.window="onClosePopoverGroup">');
 
     //Desktop menu
-    document.write('<div class="bandeau">');
+    document.write('<div class="max-w-7xl mx-auto px-4 sm:px-6"> \
+        <div class="flex justify-between items-center border-b border-gray-200 py-6">');
 
             //Logo Altanna 
             document.write('<div class="flex justify-start "> \
@@ -151,7 +152,7 @@ function Header(){
                         Nous contacter \
                     </button> \
                 </div> \
-            
+            </div> \
         </div> \
     </div> \ 
 </header> `);

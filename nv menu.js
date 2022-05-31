@@ -1,4 +1,5 @@
-//Boutons du menu
+
+    //Boutons du menu
             document.write(`<div class="hidden md:flex items-center justify-end"> \
                 <nav class="flex ml-auto items-center" x-data="Components.popoverGroup()" x-init="init()"> `);
 
