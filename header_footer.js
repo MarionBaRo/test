@@ -212,7 +212,7 @@ function Modal () {
                 x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"> \
                 <div> \
                     <div class="sm:block absolute top-0 right-0 pt-4 pr-4"> \
-                        <button type="button" class="text-gray-50 hover:text-white focus:outline-none" @click="openContactModal = false"> \
+                        <button type="button" class="text-gray-50 hover:text-white focus:outline-none" onclick=document.getElementById('`, Contact.id,`').style.display='none'> \
                             <span class="sr-only">Fermer</span> \
                             <svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"> \
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path> \
