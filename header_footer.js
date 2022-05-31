@@ -198,6 +198,18 @@ function Modal () {
     style="display:none;" \
     x-ref="dialog"> \
         <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"> \
+            <div onclick=document.getElementById('`, Contact.id,`').style.display='none'
+                aria-hidden="true"
+                class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+                x-description="Background overlay, show/hide based on modal state."
+                x-show="openContactModal"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-end="opacity-100"
+                x-transition:enter-start="opacity-0"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-end="opacity-0"
+                x-transition:leave-start="opacity-100">
+            </div>
             <span aria-hidden="true" \
                 class="hidden sm:inline-block sm:align-middle sm:h-screen"> \
                                     </span> \
@@ -339,14 +351,4 @@ function Modal () {
             </div> \
         </div> \
     </div>`);
-
-    // Get the modal
-    var modal = document.getElementById(Contact.id);
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
 }
