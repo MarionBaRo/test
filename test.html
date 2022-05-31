@@ -88,51 +88,12 @@
 </script>
 <!-- / EndFooter -->
 
-<script>
-    document.addEventListener('submit', function(e) {
-        e.preventDefault();
-        var form = e.target;
-        var method = form.method;
-        var url = form.action;
-        var data = new FormData(form);
-        var container = form.dataset.container;
-
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function () {
-            // Only run if the request is complete
-            if (xhr.readyState !== 4) return;
-            // Process our return data
-            if (xhr.status >= 200 && xhr.status < 300) {
-                //document.getElementById('submit_form').classList.add('bg-green-300');
-                //document.getElementById('submit_form').classList.add('text-white');
-                document.getElementById('submit_form').innerHTML = '<span style="color:green;">Merci !</span>';
-                setTimeout(function(){
-                    //document.getElementById('submit_form').classList.remove('bg-green-300');
-                    //document.getElementById('submit_form').classList.remove('text-white');
-                    document.getElementById('submit_form').innerHTML = 'Envoyer';
-                }, 2000);
-                //form.reset();
-            } else {
-                // This will run when it's not
-                document.getElementById('submit_form').innerHTML = '<span style="color:red;">Erreur, veuillez réessayer ultérieurement </span>';
-                setTimeout(function(){
-                    document.getElementById('submit_form').innerHTML = 'Envoyer';
-                }, 2000);
-            }
-        };
-        xhr.open(method, url);
-        xhr.send(data);
-
-        return false;
-    }, false);
-
-</script>
-
 <!-- Modal -->
 <script >
     Modal();
 </script>
 <!-- / End Modal -->
+
 
   <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
     <script nomodule id="vite-legacy-polyfill" src="./assets/polyfills-legacy.3567c74b.js"></script>
