@@ -349,7 +349,7 @@ function Modal () {
                                     <div class="sm:col-span-6"> \
                                         <div class="relative z-0 w-full mb-5"> \
                                             <label for="captcha">Please Enter the Captcha Text</label>
-                                            <img src="send.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
+                                            <img src="captcha.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
                                             <br>
                                             <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
                                         </div> \
