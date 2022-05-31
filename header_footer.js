@@ -29,64 +29,65 @@ function Header(){
     @close-popover-group.window="onClosePopoverGroup">');
 
         //Desktop menu
-        document.write('<div class="max-w-7xl mx-auto px-4 sm:px-6">');
+        document.write('<div class="max-w-7xl mx-auto px-4 sm:px-6"> \
+            <div class="flex justify-between items-center border-b border-gray-200 py-6">');
+                //Logo Altanna 
+                document.write('<div class="flex justify-start"> \
+                    <a  href="', Acceuil.href ,'"> \
+                        <img  height="40" width="130" \
+                            src="logo-with-text.svg"  alt="Altanna logo Altanna" title="Bienvenue sur Altanna"/> \
+                    </a>\
+                </div> \
+                <div class="hidden md:flex items-center justify-end" \
+                    <nav class="flex ml-auto items-center" x-data="Components.popoverGroup()" x-init="init()">');
+                        //Boutons simple
+                        for (var i=0; i < Bouton.length; i++){
+                            document.write(`<a class="hidden sm:block btn btn-transparent" \
+                            href="`, Bouton[i].href,`">`, Bouton[i].nom,`</a> `);
+                        }      
 
-            //Logo Altanna 
-            document.write('<div class="flex justify-start"> \
-                <a  href="', Acceuil.href ,'"> \
-                    <img  height="40" width="130" \
-                        src="logo-with-text.svg"  alt="Altanna logo Altanna" title="Bienvenue sur Altanna"/> \
-                </a>\
-            </div> \
-            <div class="hidden md:flex items-center justify-end" \
-                <nav class="flex ml-auto items-center" x-data="Components.popoverGroup()" x-init="init()">');
-                    //Boutons simple
-                    for (var i=0; i < Bouton.length; i++){
-                        document.write(`<a class="hidden sm:block btn btn-transparent" \
-                        href="`, Bouton[i].href,`">`, Bouton[i].nom,`</a> `);
-                    }      
-
-                    // Bouton déroulant
-                    for (var i=0; i < Bouton_d.length; i++){
-                        document.write(`<div class = "relative hidden sm:inline-block text-left deroulant"> \
-                            <div> \
-                                <a class="outline-none inline-flex justify-center items-center w-full btn btn-transparent">`, Bouton_d[i].nom,` </a> \
-                                    <svg aria-hidden="true" class="-mr-1 ml-1 h-5 w-5">\
-                                        <path clip-rule="evenodd" \
-                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" \
-                                        fill-rule="evenodd"></path> \
-                                    </svg> \
-                            </div> \
-                            <div class ="sous origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"> \
-                                <div class="py-1" role="none">`);
-                                    for (var j=0; j < Bouton_d[i].liste.length; j++){
-                                        document.write(`<a class="block px-4 py-2 text-sm text-gray-700" href="`,Bouton_d[i].liste[j].href,`"> \
-                                            <span class="flex items-center relative"> \
-                                                <span class="h-3 w-3 bg-gradient-to-t relative flex items-center relative" data-category="`, Bouton_d[i].liste[j].cat,`"> \</span> \
-                                                <span class="text-xs block text-gray-400 ml-1">`, Bouton_d[i].liste[j].type,`</span> \
-                                            </span> \
-                                            <span class="block leading-4">`, Bouton_d[i].liste[j].nom,`</span> \
-                                        </a></li>`);
-                                    }
-                                    document.write(`<span class="block leading-4 px-4 py-2 text-sm text-gray-400 border-t"> \
-                                    Pour un service sur mesure, contactez nos conseillers. \
-                                    </span> \
+                        // Bouton déroulant
+                        for (var i=0; i < Bouton_d.length; i++){
+                            document.write(`<div class = "relative hidden sm:inline-block text-left deroulant"> \
+                                <div> \
+                                    <a class="outline-none inline-flex justify-center items-center w-full btn btn-transparent">`, Bouton_d[i].nom,` </a> \
+                                        <svg aria-hidden="true" class="-mr-1 ml-1 h-5 w-5">\
+                                            <path clip-rule="evenodd" \
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" \
+                                            fill-rule="evenodd"></path> \
+                                        </svg> \
                                 </div> \
-                            </div> \
-                        </div>`);
-                    } 
-                document.write(`</nav>`);
+                                <div class ="sous origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"> \
+                                    <div class="py-1" role="none">`);
+                                        for (var j=0; j < Bouton_d[i].liste.length; j++){
+                                            document.write(`<a class="block px-4 py-2 text-sm text-gray-700" href="`,Bouton_d[i].liste[j].href,`"> \
+                                                <span class="flex items-center relative"> \
+                                                    <span class="h-3 w-3 bg-gradient-to-t relative flex items-center relative" data-category="`, Bouton_d[i].liste[j].cat,`"> \</span> \
+                                                    <span class="text-xs block text-gray-400 ml-1">`, Bouton_d[i].liste[j].type,`</span> \
+                                                </span> \
+                                                <span class="block leading-4">`, Bouton_d[i].liste[j].nom,`</span> \
+                                            </a></li>`);
+                                        }
+                                        document.write(`<span class="block leading-4 px-4 py-2 text-sm text-gray-400 border-t"> \
+                                        Pour un service sur mesure, contactez nos conseillers. \
+                                        </span> \
+                                    </div> \
+                                </div> \
+                            </div>`);
+                        } 
+                    document.write(`</nav>`);
 
-                //Bouton Nous rejoindre - Nous contacter
-                document.write(`<a class="hidden sm:block btn btn-transparent border" \
-                    href="careers.html">Nous rejoindre</a> \
-                <div class="flex-grow" @keydown.window.escape="openContactModal = false"> \
-                    <!-- Modal trigger--> \
-                    <button @click="openContactModal = true" \
-                        class="btn btn-primary inline-flex" \
-                        type="button"> \
-                        Nous contacter \
-                    </button> \
+                    //Bouton Nous rejoindre - Nous contacter
+                    document.write(`<a class="hidden sm:block btn btn-transparent border" \
+                        href="careers.html">Nous rejoindre</a> \
+                    <div class="flex-grow" @keydown.window.escape="openContactModal = false"> \
+                        <!-- Modal trigger--> \
+                        <button @click="openContactModal = true" \
+                            class="btn btn-primary inline-flex" \
+                            type="button"> \
+                            Nous contacter \
+                        </button> \
+                    </div> \
                 </div> \
             </div> \
         </div> \ 
