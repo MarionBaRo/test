@@ -339,7 +339,7 @@ function Modal () {
                                     <div class="sm:col-span-6"> \
                                         <div class ="relative z-0 w-full mb-5">
                                             <label class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">
-                                                "Pour validez votre demande, répondez à la question suivante : " 
+                                                Pour validez votre demande, répondez à la question suivante :  
                                             </label>
                                             <span class="text-sm text-red-600 hidden" data-form-helper="">
                                                 Pour validez votre demande, répondez à la question  suivante :
@@ -348,7 +348,10 @@ function Modal () {
                                     </div> \
                                     <div class="sm:col-span-6"> \
                                         <div class="relative z-0 w-full mb-5"> \
-                                            
+                                            <label for="captcha">Please Enter the Captcha Text</label>
+                                            <img src="send.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
+                                            <br>
+                                            <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
                                         </div> \
                                     </div> \
                                     <!-- Resultat du formulaire --> \
