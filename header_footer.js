@@ -41,7 +41,7 @@ function Header(){
             </div> ');
 
             //A quoi ça sert ?
-            /*document.write('<div class="-mr-2 -my-2 md:hidden"> \
+            document.write('<div class="-mr-2 -my-2 md:hidden"> \
                     <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 \
                     hover:text-gray-500 hover:bg-gray-100 focus:outline-none \
                     " @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">\
@@ -51,7 +51,7 @@ function Header(){
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> \
                         </svg> \
                     </button> \
-                </div> '); */
+                </div> '); 
             
             //Boutons simple
             for (var i=0; i < Bouton.length; i++){
