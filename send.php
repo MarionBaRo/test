@@ -33,56 +33,60 @@
         $email->CharSet = 'UTF-8';
         $email->Encoding = 'base64';
 
-        if($_REQUEST['actionform'] == 'contact'){
+        if(isset($_POST['captcha_challenge']) && $_POST['captcha_challenge'] == $_SESSION['captcha_text']) {
+            if($_REQUEST['actionform'] == 'contact'){
 
-            $email_to = 'sales@altanna.com';
+                $email_to = 'sales@altanna.com';
 
-            $email_message = "Message du site : .\n\n";
-            $email_message .= "<ul> \n";
-            $email_message .= " <li> Prénom : "    . ($_REQUEST['first-name']) . "</li> \n";
-            $email_message .= " <li> Nom : "       . ($_REQUEST['last-name']) . "</li> \n";
-            $email_message .= " <li> Email : "     . ($_REQUEST['email']) . "</li> \n";
-            $email_message .= " <li> Téléphone : " . ($_REQUEST['phone']) . "</li> \n\n";
-            $email_message .= "</ul> \n";
+                $email_message = "Message du site : .\n\n";
+                $email_message .= "<ul> \n";
+                $email_message .= " <li> Prénom : "    . ($_REQUEST['first-name']) . "</li> \n";
+                $email_message .= " <li> Nom : "       . ($_REQUEST['last-name']) . "</li> \n";
+                $email_message .= " <li> Email : "     . ($_REQUEST['email']) . "</li> \n";
+                $email_message .= " <li> Téléphone : " . ($_REQUEST['phone']) . "</li> \n\n";
+                $email_message .= "</ul> \n";
 
-            $email_message .= "<ul> \n";
-            $email_message .= " <li> Adresse : "   . ($_REQUEST['address']) . "</li> \n";
-            $email_message .= " <li> Ville : "     . ($_REQUEST['city']) . "</li> \n";
-            $email_message .= " <li> CP : "        . ($_REQUEST['postal-code']) . "</li> \n\n";
-            $email_message .= "</ul> \n";
+                $email_message .= "<ul> \n";
+                $email_message .= " <li> Adresse : "   . ($_REQUEST['address']) . "</li> \n";
+                $email_message .= " <li> Ville : "     . ($_REQUEST['city']) . "</li> \n";
+                $email_message .= " <li> CP : "        . ($_REQUEST['postal-code']) . "</li> \n\n";
+                $email_message .= "</ul> \n";
 
-            $email_message .= "<ul> \n";
-            $email_message .= " <li> Projet : "    . ($_REQUEST['contexte']) . "</li> \n";
-            $email_message .= "</ul> \n";
-        } else {
+                $email_message .= "<ul> \n";
+                $email_message .= " <li> Projet : "    . ($_REQUEST['contexte']) . "</li> \n";
+                $email_message .= "</ul> \n";
+            } else {
 
-            $email_to = 'sberthillot@altanna.com';
+                $email_to = 'sberthillot@altanna.com';
 
-            $email_message = "Nouveau candidat : .\n\n";
-            $email_message .= "<ul> \n";
-            $email_message .= " <li> Prénom : "    . ($_REQUEST['first-name']) . "</li> \n";
-            $email_message .= " <li> Nom : "       . ($_REQUEST['last-name']) . "</li> \n";
-            $email_message .= " <li> Email : "     . ($_REQUEST['email']) . "</li> \n";
-            $email_message .= " <li> Téléphone : " . ($_REQUEST['phone']) . "</li> \n\n";
-            $email_message .= "</ul> \n";
+                $email_message = "Nouveau candidat : .\n\n";
+                $email_message .= "<ul> \n";
+                $email_message .= " <li> Prénom : "    . ($_REQUEST['first-name']) . "</li> \n";
+                $email_message .= " <li> Nom : "       . ($_REQUEST['last-name']) . "</li> \n";
+                $email_message .= " <li> Email : "     . ($_REQUEST['email']) . "</li> \n";
+                $email_message .= " <li> Téléphone : " . ($_REQUEST['phone']) . "</li> \n\n";
+                $email_message .= "</ul> \n";
 
-            $email_message .= "<ul> \n";
-            $email_message .= " <li> Adresse : "   . ($_REQUEST['address']) . "</li> \n";
-            $email_message .= " <li> Ville : "     . ($_REQUEST['city']) . "</li> \n";
-            $email_message .= " <li> CP : "        . ($_REQUEST['postal-code']) . "</li> \n\n";
-            $email_message .= "</ul> \n";
+                $email_message .= "<ul> \n";
+                $email_message .= " <li> Adresse : "   . ($_REQUEST['address']) . "</li> \n";
+                $email_message .= " <li> Ville : "     . ($_REQUEST['city']) . "</li> \n";
+                $email_message .= " <li> CP : "        . ($_REQUEST['postal-code']) . "</li> \n\n";
+                $email_message .= "</ul> \n";
 
-            $email_message .= "<ul> \n";
-            $email_message .= " <li> Ambition : "   . ($_REQUEST['goals']) . "</li> \n";
-            $email_message .= " <li> Zone de recherche : "     . ($_REQUEST['location']) . "</li> \n";
-            $email_message .= " <li> J'accepte d'autres régions / Je suis mobile : "     . ($_REQUEST['comments']) . "</li> \n";
-            $email_message .= " <li> Profil linkedIn,blog... : "        . ($_REQUEST['source']) . "</li> \n\n";
-            $email_message .= "</ul> \n";
+                $email_message .= "<ul> \n";
+                $email_message .= " <li> Ambition : "   . ($_REQUEST['goals']) . "</li> \n";
+                $email_message .= " <li> Zone de recherche : "     . ($_REQUEST['location']) . "</li> \n";
+                $email_message .= " <li> J'accepte d'autres régions / Je suis mobile : "     . ($_REQUEST['comments']) . "</li> \n";
+                $email_message .= " <li> Profil linkedIn,blog... : "        . ($_REQUEST['source']) . "</li> \n\n";
+                $email_message .= "</ul> \n";
 
-            if (isset($_FILES['file-upload']) &&
-                $_FILES['file-upload']['error'] == UPLOAD_ERR_OK) {
-                $email->AddAttachment($_FILES['file-upload']['tmp_name'], $_FILES['file-upload']['name']);
+                if (isset($_FILES['file-upload']) &&
+                    $_FILES['file-upload']['error'] == UPLOAD_ERR_OK) {
+                    $email->AddAttachment($_FILES['file-upload']['tmp_name'], $_FILES['file-upload']['name']);
+                }
             }
+        } else {
+            echo '<p>Vous avez rentré un mauvais captcha</p>';
         }
 
         $email->isHTML(true);
