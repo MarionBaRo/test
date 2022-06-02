@@ -370,3 +370,17 @@ function Modal () {
         </div> \
     </div>`);
 };
+
+window.Alpine=s,s.store("listboxData",{
+    modelName:"selected",open:!1,selectedIndex:0,activeIndex:0,items:[{
+      id:0,name:"-- Quel est votre enjeu ? --",url:"#"
+    },{
+      id:1,name:"Améliorer la cybersécurité",url:"./zero-trust.html"
+    },{
+      id:2,name:"Bénéficier d'un réseau performant et sécurisé",url:"./entreprise-networking.html"
+    },{
+      id:3,name:"Intégrer des services collaboratifs",url:"./digital-workspace.html"
+    },{
+      id:4,name:"Test",url:"./test.html"
+    }]
+},!0),s.start();
