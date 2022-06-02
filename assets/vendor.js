@@ -184,9 +184,14 @@ var e,t,n,r,i=Object.defineProperty,a=Object.getOwnPropertySymbols,o=Object.prot
             ("length"===t||t>=l)&&p(e)
         }));
         else switch(void 0!==s&&p(f.get(s)),i){
-            case"add":n.isArray(e)?n.isIntegerKey(s)&&p(f.get("length")):(p(f.get(a)),n.isMap(e)&&p(f.get(o)));break;
-            case"delete":n.isArray(e)||(p(f.get(a)),n.isMap(e)&&p(f.get(o)));break;
-            case"set":n.isMap(e)&&p(f.get(a))
+            case"add":
+                n.isArray(e)?n.isIntegerKey(s)&&p(f.get("length")):(p(f.get(a)),n.isMap(e)&&p(f.get(o)));
+                break;
+            case"delete":
+                n.isArray(e)||(p(f.get(a)),n.isMap(e)&&p(f.get(o)));
+                break;
+            case"set":
+                n.isMap(e)&&p(f.get(a))
         }d.forEach((t=>{
             t.options.onTrigger&&t.options.onTrigger({
                 effect:t,target:e,key:s,type:i,newValue:l,oldValue:u,oldTarget:c
@@ -197,7 +202,8 @@ var e,t,n,r,i=Object.defineProperty,a=Object.getOwnPropertySymbols,o=Object.prot
         return function(r,i,a){
             if("__v_isReactive"===i)return!e;
             if("__v_isReadonly"===i)return e;
-            if("__v_raw"===i&&a===(e?t?oe:ae:t?ie:re).get(r))return r;const o=n.isArray(r);
+            if("__v_raw"===i&&a===(e?t?oe:ae:t?ie:re).get(r))return r;
+            const o=n.isArray(r);
             if(!e&&o&&n.hasOwn(k,i))return Reflect.get(k,i,a);
             const s=Reflect.get(r,i,a);
             if(n.isSymbol(i)?_.has(i):v(i))return s;
