@@ -4,7 +4,7 @@ var Contact = {nom : "Nous Contacter", href : "", id : "contact"};
 var Rejoindre = {nom : "Nous Rejoindre", href : "./careers.html" , id : ""};
 
 var Liste = [Acceuil, Expertise, Contact, Rejoindre];
-var Bouton = [Expertise, Acceuil];
+var Bouton = [Expertise];
 
 var Service = [{
     nom : "Security Zero Trust", href : "./zero-trust.html", cat : "security", type : "Cybersécurité" },{
@@ -12,7 +12,6 @@ var Service = [{
     nom : "Entreprise Networking", href : "./entreprise-networking.html", cat : "network", type : "Réseau" }
 ];
 var Bouton_d = [{
-    nom : "Services managés", liste : Service, fin : "Pour un service sur mesure, contactez nos conseillers."},{
     nom : "Services managés", liste : Service, fin : "Pour un service sur mesure, contactez nos conseillers."}
 ];
 
