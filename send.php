@@ -83,7 +83,13 @@
                 if (isset($_FILES['file-upload']) &&
                     $_FILES['file-upload']['error'] == UPLOAD_ERR_OK) {
                     $email->AddAttachment($_FILES['file-upload']['tmp_name'], $_FILES['file-upload']['name']);
-                }
+                }  
+            }
+
+            if(mail($recipient, $email_title, $visitor_message, $headers)) {
+                echo '<p>Merci de nous avoir contacter, nous vous répondrons sous les 48h</p>';
+            } else {
+                echo '<p>Nous sommes désolé mais le message n\'a pas pu être envoyé</p>';
             }
         } else {
             echo '<p>Vous avez rentré un mauvais captcha</p>';
