@@ -223,12 +223,6 @@
 <script >
     Modal();
     
-    //Refresh the Captcha
-    var refreshButton = document.querySelector(".refresh-captcha");
-    refreshButton.onclick = function() {
-        document.querySelector(".captcha-image").src = 'captcha.php?' + Date.now();
-    }
-
     // Get the modal
     var modal = document.getElementById(Contact.id);
     

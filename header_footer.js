@@ -8,8 +8,8 @@ var Bouton = [Expertise];
 
 var Service = [{
     nom : "Security Zero Trust", href : "./zero-trust.html", cat : "security", type : "Cybersécurité" },{
-    nom : "Digital Workspace", href : "./digital-workspace.html", cat : "infrastructure-cloud", type : "Infrastructure" },{
-    nom : "Entreprise Networking", href : "./entreprise-networking.html", cat : "network", type : "Réseau" }
+    nom : "Entreprise Networking", href : "./entreprise-networking.html", cat : "network", type : "Réseau" },{
+    nom : "Digital Workspace", href : "./digital-workspace.html", cat : "infrastructure-cloud", type : "Infrastructure" }
 ];
 var Bouton_d = [{
     nom : "Services managés", liste : Service, fin : "Pour un service sur mesure, contactez nos conseillers."}
@@ -336,24 +336,6 @@ function Modal () {
                                         </div> \
                                         <span class="mt-1 block text-xs text-gray-500">Décrivez les éléments clés qui nous permettrons de préparer au mieux notre future rencontre.</span> \
                                     </div> \
-                                    <div class="sm:col-span-6"> \
-                                        <div class ="relative z-0 w-full mb-5">
-                                            <label class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">
-                                                Pour validez votre demande, répondez à la question suivante :  
-                                            </label>
-                                            <span class="text-sm text-red-600 hidden" data-form-helper="">
-                                                Pour validez votre demande, répondez à la question  suivante :
-                                            </span>
-                                        </div>
-                                    </div> \
-                                    <div class="sm:col-span-6"> \
-                                        <div class="relative z-0 w-full mb-5"> \
-                                            <label for="captcha">Please Enter the Captcha Text</label>
-                                            <img src="captcha.php" alt="CAPTCHA"><i>Refresh</i>
-                                            <br>
-                                            <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
-                                        </div> \
-                                    </div> \
                                     <!-- Resultat du formulaire --> \
                                     <div class="sm:col-span-12" id="formResult"></div> \
                                 </div> \
@@ -371,4 +353,22 @@ function Modal () {
     </div>`);
 };
 
-S
+/* <div class="sm:col-span-6"> \
+        <div class ="relative z-0 w-full mb-5">
+            <label class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">
+                Pour validez votre demande, répondez à la question suivante :  
+            </label>
+            <span class="text-sm text-red-600 hidden" data-form-helper="">
+                Pour validez votre demande, répondez à la question  suivante :
+            </span>
+        </div>
+    </div> \
+    <div class="sm:col-span-6"> \
+        <div class="relative z-0 w-full mb-5"> \
+            <label for="captcha">Please Enter the Captcha Text</label>
+            <img src="captcha.php" alt="CAPTCHA"><i>Refresh</i>
+            <br>
+            <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
+        </div> \
+    </div> \
+*/
