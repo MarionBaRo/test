@@ -58,7 +58,7 @@ function Header(){
                                         </svg> \
                                     </a> \
                                 </div> \
-                                <div class ="sous origin-top-right absolute right-0 mt-1 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"> \
+                                <div class ="sous origin-top-right absolute right-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"> \
                                     <div class="py-1" role="none">`);
                                         for (var j=0; j < Bouton_d[i].liste.length; j++){
                                             document.write(`<a class="block px-4 py-2 text-sm text-gray-700" href="`,Bouton_d[i].liste[j].href,`"> \
@@ -349,7 +349,7 @@ function Modal () {
                                     <div class="sm:col-span-6"> \
                                         <div class="relative z-0 w-full mb-5"> \
                                             <label for="captcha">Please Enter the Captcha Text</label>
-                                            <img src="captcha.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
+                                            <img src="captcha.php" alt="CAPTCHA"><i>Refresh</i>
                                             <br>
                                             <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
                                         </div> \
@@ -364,23 +364,11 @@ function Modal () {
                                 </button> \
                             </div> \
                         </form> \
-                    </div> \
+                    </div> 
                 </div> \
             </div> \
         </div> \
     </div>`);
 };
 
-window.Alpine=s,s.store("listboxData",{
-    modelName:"selected",open:!1,selectedIndex:0,activeIndex:0,items:[{
-      id:0,name:"-- Quel est votre enjeu ? --",url:"#"
-    },{
-      id:1,name:"Améliorer la cybersécurité",url:"./zero-trust.html"
-    },{
-      id:2,name:"Bénéficier d'un réseau performant et sécurisé",url:"./entreprise-networking.html"
-    },{
-      id:3,name:"Intégrer des services collaboratifs",url:"./digital-workspace.html"
-    },{
-      id:4,name:"Test",url:"./test.html"
-    }]
-},!0),s.start();
+S

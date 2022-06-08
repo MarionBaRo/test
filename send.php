@@ -57,7 +57,7 @@
                 $email_message .= "</ul> \n";
             } else {
 
-                $email_to = 'sberthillot@altanna.com';
+                $email_to = 'adv@altanna.com';
 
                 $email_message = "Nouveau candidat : .\n\n";
                 $email_message .= "<ul> \n";
