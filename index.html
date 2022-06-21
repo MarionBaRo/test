@@ -535,7 +535,7 @@
 </script>
 <!-- / EndFooter -->
 
-<script>
+<!-- <script>
     document.addEventListener('submit', function(e) {
         e.preventDefault();
         var form = e.target;
@@ -573,7 +573,7 @@
         return false;
     }, false);
 
-</script>
+</script> -->
 
 <!-- Modal -->
 <script >
@@ -591,9 +591,55 @@
 </script>
 <!-- / End Modal -->
 
-  <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
-    <script nomodule id="vite-legacy-polyfill" src="./assets/polyfills-legacy.3567c74b.js"></script>
-    <script nomodule id="vite-legacy-entry" data-src="./assets/index-legacy.0afbcdfa.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+<script nomodule>
+    !function(){
+        var e=document,t=e.createElement("script");
+        if(!("noModule"in t)&&"onbeforeload"in t){
+            var n=!1;e.addEventListener("beforeload",(function(e){
+                if(e.target===t)n=!0;
+                else if(!e.target.hasAttribute("nomodule")||!n)return;
+                e.preventDefault()
+            }),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()
+        }
+    }();
+</script>
+<script nomodule id="vite-legacy-polyfill" src="./assets/polyfills-legacy.3567c74b.js"></script>
+<script nomodule id="vite-legacy-entry" data-src="./assets/careers-legacy.75df5bbc.js">
+    System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))
+</script>
 </body>
+
+
+<script>
+var ajaxForm = document.querySelector('[data-ajaxform]');
+ajaxForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = e.target;
+    var method = form.method;
+    var url = form.action;
+    var data = new FormData(form);
+    var container = form.dataset.container;
+
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        // Only run if the request is complete
+        if (xhr.readyState !== 4) return;
+        // Process our return data
+        if (xhr.status >= 200 && xhr.status < 300) {
+            if(typeof container !== 'undefined') {
+                document.getElementById(container).innerHTML = xhr.response;
+            }
+        } else {
+            // This will run when it's not
+            console.log('[data-ajaxform] :: The request failed!');
+        }
+    };
+    xhr.open(method, url);
+    xhr.send(data);
+
+    return false;
+}, false);
+
+</script>
 
 </html>
