@@ -1,3 +1,5 @@
+//Fonctions du menu déroulant
+
 var e=Object.defineProperty,t=Object.getOwnPropertySymbols,n=Object.prototype.hasOwnProperty,i=Object.prototype.propertyIsEnumerable,o=(t,n,i)=>n in t?e(t,n,{
   enumerable:!0,configurable:!0,writable:!0,value:i
 }):t[n]=i;
