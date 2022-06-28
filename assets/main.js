@@ -23,7 +23,7 @@ import{m as s,c as r,a}from"./vendor.js";
     (e);
     fetch(e.href,t)
   }
-}();//
+}();
 window.Components={},window.Components.listbox=function(e){
   return((e,s)=>{
     for(var r in s||(s={}))n.call(s,r)&&o(e,r,s[r]);
@@ -120,8 +120,8 @@ window.Components={},window.Components.listbox=function(e){
       },toggle(e){
         this.open=!this.open,this.open?this.restoreEl=e.currentTarget:this.restoreEl&&this.restoreEl.focus()
       }
-  }
-}/*,window.Components.radioGroup=function({initialCheckedIndex:e=0}={}){
+  }//
+},window.Components.radioGroup=function({initialCheckedIndex:e=0}={}){
   return{
     value:void 0,active:void 0,init(){
       var t;
@@ -169,7 +169,7 @@ window.Components={},window.Components.listbox=function(e){
       window.addEventListener("focus",e,!0)
     }
   }
-},window.Components.popover=function({open:e=!1,focus:t=!1}={}){
+}/*,window.Components.popover=function({open:e=!1,focus:t=!1}={}){
   const n=["[contentEditable=true]","[tabindex]","a[href]","area[href]","button:not([disabled])","iframe","input:not([disabled])","select:not([disabled])","textarea:not([disabled])"].map((e=>`${e}:not([tabindex='-1'])`)).join(",");
   return{
     __type:"popover",open:e,init(){
