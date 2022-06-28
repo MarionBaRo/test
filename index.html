@@ -591,13 +591,13 @@
 
 <script nomodule>
     !function(){
-        var doc=document,docEle=doc.createElement("script");
-        if(!("noModule"in docEle)&&"onbeforeload"in docEle){
-            var n=!1;doc.addEventListener("beforeload",(function(doc){
-                if(doc.target===docEle)n=!0;
-                else if(!doc.target.hasAttribute("nomodule")||!n)return;
-                doc.preventDefault()
-            }),!0),docEle.type="module",docEle.src=".",doc.head.appendChild(docEle),docEle.remove()
+        var e=document,t=e.createElement("script");
+        if(!("noModule"in t)&&"onbeforeload"in t){
+            var n=!1;e.addEventListener("beforeload",(function(e){
+                if(e.target===t)n=!0;
+                else if(!e.target.hasAttribute("nomodule")||!n)return;
+                e.preventDefault()
+            }),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()
         }
     }();
 </script>
