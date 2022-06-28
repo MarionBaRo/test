@@ -207,8 +207,8 @@ window.Components={},window.Components.listbox=function(e){
       this.open=!this.open,this.open?this.restoreEl=e.currentTarget:this.restoreEl&&this.restoreEl.focus()
     }
   }
-}/*,window.Alpine=s,s.store("listboxData",{
-  modelName:"selected",open:!1,selectedIndex:0,activeIndex:0,items:[{
+},window.Alpine=s,s.store("listboxData",{
+  modelName:"selected",/*open:!1,selectedIndex:0,activeIndex:0*/,items:[{
     id:0,name:"-- Quel est votre enjeu ? --",url:"#"
   },{
     id:1,name:"Améliorer la cybersécurité",url:"./zero-trust.html"
@@ -219,7 +219,7 @@ window.Components={},window.Components.listbox=function(e){
   },{
     id:4,name:"Test",url:"./test.html"
   }]
-},!0),s.start()*/;
+},!0),s.start();
 const c=document.querySelector("[data-confetti]");
 void 0!==c&&null!=c&&c.addEventListener("click",(function(e){
   r(c,{
