@@ -168,8 +168,8 @@ window.Components={},window.Components.listbox=function(e){
       };
       window.addEventListener("focus",e,!0)
     }
-  }//
-},window.Components.popover=function({open:e=!1,focus:t=!1}={}){
+  }
+}/*,window.Components.popover=function({open:e=!1,focus:t=!1}={}){
   const n=["[contentEditable=true]","[tabindex]","a[href]","area[href]","button:not([disabled])","iframe","input:not([disabled])","select:not([disabled])","textarea:not([disabled])"].map((e=>`${e}:not([tabindex='-1'])`)).join(",");
   return{
     __type:"popover",open:e,init(){
@@ -219,7 +219,7 @@ window.Components={},window.Components.listbox=function(e){
   },{
     id:4,name:"Test",url:"./test.html"
   }]
-},!0),s.start();/*
+},!0),s.start()*/;
 const c=document.querySelector("[data-confetti]");
 void 0!==c&&null!=c&&c.addEventListener("click",(function(e){
   r(c,{
@@ -291,4 +291,4 @@ if(void 0!==d&&null!=d){
     }for(let e=0;e<t.length;e++)o(t[e])
   }()
 }
-      */
+
