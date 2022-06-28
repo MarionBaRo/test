@@ -3,7 +3,7 @@
 var e=Object.defineProperty,t=Object.getOwnPropertySymbols,n=Object.prototype.hasOwnProperty,i=Object.prototype.propertyIsEnumerable,o=(t,n,i)=>n in t?e(t,n,{
   enumerable:!0,configurable:!0,writable:!0,value:i
 }):t[n]=i;
-import{m as s,c as r,a}from"./vendor.js";
+import{m as s,c as r,a}from"./vendor.js";/*
 !function(){
   const e=document.createElement("link").relList;
   if(!(e&&e.supports&&e.supports("modulepreload"))){
@@ -291,4 +291,4 @@ if(void 0!==d&&null!=d){
     }for(let e=0;e<t.length;e++)o(t[e])
   }()
 }
-      
+      */
