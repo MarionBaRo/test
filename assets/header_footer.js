@@ -388,7 +388,7 @@ function Hero () {
                         <select name="Hero">');
 
                         for (var i=0; i < Liste_d.length; i++){
-                            document.write('<option> \
+                            document.write('<option value = "liste"> \
                                 <div :aria-expanded="open" \
                                     class="outline-none btn btn-white w-full flex" \
                                     @click="Liste_d_Onclick(', Liste_d[i].id,')" \
