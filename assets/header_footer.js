@@ -374,7 +374,7 @@ function Modal () {
     </div>`);
 };
 
-function Hero () {
+/*function Hero () {
     //Titre
     document.write('<section class="mt-9 sm:mt-16 px-4"> \
         <div class="container text-center"> \
@@ -509,7 +509,7 @@ function Hero () {
                                 </template>
                             </ul>
                         </div> 
-                    </div> */
+                    </div> 
                     <a x-bind:href = {Liste_d_lien} class="btn btn-primary">
                         Découvrir l'offre
                     </a> 
@@ -517,4 +517,4 @@ function Hero () {
             </div> \
         </div> \
     </section>');
-};
+};*/
