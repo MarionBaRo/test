@@ -2,9 +2,10 @@ var Acceuil = {nom : "Acceuil", href : "index.html" , id : ""};
 var Expertise = {nom : "Expertise", href : "expertise.html" , id : ""};
 var Contact = {nom : "Nous Contacter", href : "", id : "contact"};
 var Rejoindre = {nom : "Nous Rejoindre", href : "./careers.html" , id : ""};
+var Test = {nom : "Test", href : "test.html" , id : ""};
 
 var Liste = [Acceuil, Expertise, Contact, Rejoindre];
-var Bouton = [Expertise];
+var Bouton = [Expertise, Test];
 
 var Service = [{
     nom : "Security Zero Trust", href : "./zero-trust.html", cat : "security", type : "Cybersécurité" },{
@@ -354,22 +355,147 @@ function Modal () {
     </div>`);
 };
 
-/* <div class="sm:col-span-6"> \
-        <div class ="relative z-0 w-full mb-5">
-            <label class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">
-                Pour validez votre demande, répondez à la question suivante :  
-            </label>
-            <span class="text-sm text-red-600 hidden" data-form-helper="">
-                Pour validez votre demande, répondez à la question  suivante :
-            </span>
-        </div>
-    </div> \
-    <div class="sm:col-span-6"> \
-        <div class="relative z-0 w-full mb-5"> \
-            <label for="captcha">Please Enter the Captcha Text</label>
-            <img src="captcha.php" alt="CAPTCHA"><i>Refresh</i>
-            <br>
-            <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
+function Hero () {
+    //Titre
+    document.write('<section class="mt-9 sm:mt-16 px-4"> \
+        <div class="container text-center"> \
+            <h1 class="sm:max-w-7xl mx-auto text-3xl sm:text-7xl lg:text-8xl tracking-tight font-extrabold text-gray-900"> \
+                <span class="block xl:inline">Experts en solutions d’infrastructures IT complexes</span> \
+            </h1>');
+
+        // Menu déroulant
+        document.write('<div class="sm:max-w-2xl mt-8 sm:max-w-2xl mx-auto text-center "> \
+                <div class="mt-3 flex flex-col md:flex-row gap-y-4 md:gap-y-0"  \
+                    x-data="Components.listbox($store.listboxData)"  \
+                    x-init="init()">');
+                    /*<div class="relative min-w-0 flex-grow">');
+
+                    /*
+                        <select name="Hero">
+
+                            <option class="outline-none btn btn-white w-full flex"
+                                value = "#">
+                                <span class="block truncate">
+                                    -- Quels sont votre enjeux et votre besoin --
+                                </span>
+                            </option>
+                            <option value = "./zero-trust.html"> 
+                                <span class="block truncate"
+                                    x-text="selected.name">
+                                    Améliorer la cybersécurité
+                            </span> 
+                            </option>
+                            <option value = "./entreprise-networking.html"> 
+                                <span class="block truncate"
+                                    x-text="selected.name">
+                                    Bénéficier d'un réseau performant et sécurisé
+                                </span>
+                            </option>
+                            <option value = "./digital-workspace.html"> 
+                                <span class="block truncate"
+                                    x-text="selected.name">
+                                    Intégrer des services collaboratifs
+                                </span>
+                            </option>
+                        
+                        </select>
+                        /*</div>
+                        </div><div>
+                            <button :aria-expanded="open"
+                                    @click="onButtonClick()"
+                                    @click.outside="open = false"
+                                    @keydown.arrow-down.stop.prevent="onButtonClick()"
+                                    @keydown.arrow-up.stop.prevent="onButtonClick()"
+                                    aria-haspopup="listbox"
+                                    aria-labelledby="listbox-label"
+                                    class="outline-none btn btn-white w-full flex"
+                                    type="button"
+                                    x-ref="button">
+                                <span class="block truncate"
+                                    x-text="selected.name">
+                                    -- Quels sont votre enjeux et votre besoin --
+                                </span>
+                                <span class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                                    <svg aria-hidden="true"
+                                        class="h-5 w-5 text-gray-400"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                        x-description="Heroicon name: solid/selector"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd"
+                                            d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                                            fill-rule="evenodd">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <ul
+                                    :aria-activedescendant="activeDescendant"
+                                    @keydown.arrow-down.prevent="onArrowDown()"
+                                    @keydown.arrow-up.prevent="onArrowUp()"
+                                    @keydown.enter.stop.prevent="onOptionSelect()"
+                                    @keydown.escape="onEscape()"
+                                    @keydown.space.stop.prevent="onOptionSelect()"
+                                    aria-activedescendant=""
+                                    aria-labelledby="listbox-label"
+                                    class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
+                                    role="listbox"
+                                    style="display:none;"
+                                    tabindex="-1"
+                                    x-description="Select popover, show/hide based on select state."
+                                    x-max="1"
+                                    x-ref="listbox"
+                                    x-show="open"
+                                    x-transition:leave="transition ease-in duration-100"
+                                    x-transition:leave-end="opacity-0"
+                                    x-transition:leave-start="opacity-100">
+                                <template : key="id" x-for="[id, value] in Object.entries($store.listboxData.items)">
+                                    <li :class="{ 'text-white bg-gray-800': activeIndex === id, 'text-gray-900': !(activeIndex === id) }"
+                                        :id="'listbox-option-' + id"
+                                        @click="choose(id)"
+                                        @mouseenter="activeIndex = id"
+                                        @mouseleave="activeIndex = null"
+                                        class="cursor-default select-none relative py-2 pl-3 pr-9 text-gray-900"
+                                        id=""
+                                        role="option"
+                                        x-description="Select option, manage highlight styles based on mouseenter/mouseleave and keyboard navigation."
+                                        x-state:off="Not Highlighted"
+                                        x-state:on="Highlighted">
+                                        <span :class="{ 'font-semibold': selectedIndex === id, 'font-normal': !(selectedIndex === id) }"
+                                            class="font-normal block truncate"
+                                            x-state:off="Not Selected"
+                                            x-state:on="Selected"
+                                            x-text="value.name">
+                                        </span>
+                                        <span :class="{ 'text-white': activeIndex === id, 'text-indigo-600': !(activeIndex === id) }"
+                                            class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600"
+                                            style="display: none;"
+                                            x-description="Checkmark, only display for selected option."
+                                            x-show="selectedIndex === id"
+                                            x-state:off="Not Highlighted"
+                                            x-state:on="Highlighted">
+                                            <svg aria-hidden="true"
+                                                class="h-5 w-5"
+                                                fill="currentColor"
+                                                viewBox="0 0 20 20"
+                                                x-description="Heroicon name: solid/check"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path clip-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    fill-rule="evenodd">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div> 
+                    </div>
+                    <a x-bind:href="selected.url" class="btn btn-primary">
+                        Découvrir l'offre
+                    </a> */
+                document.write('</div> \
+            </div> \
         </div> \
-    </div> \
-*/
+    </section>');
+};
