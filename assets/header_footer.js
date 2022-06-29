@@ -384,19 +384,26 @@ function Hero () {
         // Menu déroulant
         document.write('<div class="sm:max-w-2xl mt-8 sm:max-w-2xl mx-auto text-center "> \
                 <div class="mt-3 flex flex-col md:flex-row gap-y-4 md:gap-y-0"  \
-                    x-data="Components.listbox($store.listboxData)"  \
-                    x-init="init()">');
-                    /*<div class="relative min-w-0 flex-grow">');
+                    <div class="relative min-w-0 flex-grow"> \
+                        <select name="Hero">');
 
-                    /*
-                        <select name="Hero">
-
-                            <option class="outline-none btn btn-white w-full flex"
-                                value = "#">
-                                <span class="block truncate">
-                                    -- Quels sont votre enjeux et votre besoin --
-                                </span>
-                            </option>
+                        for (var i=0; i < Liste_d.length; i++){
+                            document.write('<option> \
+                                <button :aria-expanded="open" \
+                                        @click="Liste_d_Onclick(', Liste_d[i].id,')" \
+                                        @click.outside="open = false" \
+                                        @keydown.arrow-down.stop.prevent="onButtonClick()" \
+                                        @keydown.arrow-up.stop.prevent="onButtonClick()" \
+                                        class="outline-none btn btn-white w-full flex" \
+                                        type="button" \
+                                        x-ref="button"> \
+                                    <span class="block truncate" \
+                                        ',Liste_d[i].name ,'\
+                                    </span> \
+                                </button> \
+                            </option>');
+                        }
+                            /*
                             <option value = "./zero-trust.html"> 
                                 <span class="block truncate"
                                     x-text="selected.name">
