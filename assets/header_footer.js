@@ -389,7 +389,7 @@ function Hero () {
 
                         for (var i=0; i < Liste_d.length; i++){
                             document.write('<option> \
-                                <button :aria-expanded="open" \
+                                 :aria-expanded="open" \
                                         @click="Liste_d_Onclick(', Liste_d[i].id,')" \
                                         @click.outside="open = false" \
                                         @keydown.arrow-down.stop.prevent="onButtonClick()" \
@@ -400,11 +400,10 @@ function Hero () {
                                     <span class="block truncate" \
                                         ',Liste_d[i].name ,'\
                                     </span> \
-                                </button> \
                             </option>');
                         }
                         document.write('</select>');
-                        
+
                         /*</div>
                         </div><div>
                             <button :aria-expanded="open"
