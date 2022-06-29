@@ -1,8 +1,8 @@
-var Acceuil = {nom : "Acceuil", href : "index.html" , id : ""};
-var Expertise = {nom : "Expertise", href : "expertise.html" , id : ""};
+var Acceuil = {nom : "Acceuil", href : "./index.html" , id : ""};
+var Expertise = {nom : "Expertise", href : "./expertise.html" , id : ""};
 var Contact = {nom : "Nous Contacter", href : "", id : "contact"};
 var Rejoindre = {nom : "Nous Rejoindre", href : "./careers.html" , id : ""};
-var Test = {nom : "Test", href : "test.html" , id : ""};
+var Test = {nom : "Test", href : "./test.html" , id : ""};
 
 var Liste = [Acceuil, Expertise, Contact, Rejoindre];
 var Bouton = [Expertise, Test];
@@ -21,6 +21,26 @@ var Adresse = [{
     lieu : "20 Boulevard Eugène Deruelle, 69003 Lyon (France)", lien : "https://www.google.com/maps/place/20+Bd+Eug%C3%A8ne+Deruelle,+69003+Lyon/@45.762807,4.8530102,18z/data=!3m1!4b1!4m5!3m4!1s0x47f4eb49a0d39e27:0x8a254ce143a4d89f!8m2!3d45.762807!4d4.8538978" },{
     lieu : "445 Rue Lavoisier, 38330 Montbonnot-Saint-Martin (France)", lien : "https://www.google.com/maps/place/445+Rue+Lavoisier,+38330+Montbonnot-Saint-Martin/data=!4m2!3m1!1s0x478a5f45485db821:0x18a1f2312e8d685c?sa=X&ved=2ahUKEwi8mdGe2Jr0AhUHxoUKHYJ1AMEQ8gF6BAgTEAE" }
 ];
+
+var Liste_d = [{
+    id:0,name:"-- Quel est votre enjeu ? --",url:"#"
+  },{
+    id:1,name:"Améliorer la cybersécurité",url:"./zero-trust.html"
+  },{
+    id:2,name:"Bénéficier d'un réseau performant et sécurisé",url:"./entreprise-networking.html"
+  },{
+    id:3,name:"Intégrer des services collaboratifs",url:"./digital-workspace.html"
+  },{
+    id:4,name:"Test",url:"./test.html"
+  }];
+
+var Liste_d_lien = "#";
+
+function Liste_d_Onclick (i){
+    var x = document.getElementById(i);
+    Liste_d_lien = x.url;
+};
+
 
 function Header(){
     document.write('<header class="z-40 relative bg-white" \
@@ -490,10 +510,10 @@ function Hero () {
                                 </template>
                             </ul>
                         </div> 
-                    </div>
-                    <a x-bind:href="selected.url" class="btn btn-primary">
+                    </div> */
+                    <a x-bind:href = {Liste_d_lien} class="btn btn-primary">
                         Découvrir l'offre
-                    </a> */
+                    </a> 
                 document.write('</div> \
             </div> \
         </div> \
