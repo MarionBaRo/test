@@ -510,7 +510,7 @@ function Hero () {
                             </ul>
                         </div> 
                     </div> */
-                    document.write(`<a href = {Liste_d_lien} class="btn btn-primary">
+                    document.write(`<a href = Liste_d_lien class="btn btn-primary">
                         Découvrir l'offre \
                     </a> \
                 </div> \
