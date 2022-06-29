@@ -41,7 +41,6 @@ function Liste_d_Onclick (i){
     Liste_d_lien = x.url;
 };
 
-
 function Header(){
     document.write('<header class="z-40 relative bg-white" \
     x-data="Components.popover({ open: false, focus: true })" \
