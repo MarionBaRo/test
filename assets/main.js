@@ -208,7 +208,7 @@ window.Components={},window.Components.listbox=function(e){
     }
   }
 },window.Alpine=s,s.store("listboxData",{
-  modelName:"selected",/*open:!1,selectedIndex:0,activeIndex:0*/,items:[{
+  modelName:"selected",open:!1,selectedIndex:0,activeIndex:0,items:[{
     id:0,name:"-- Quel est votre enjeu ? --",url:"#"
   },{
     id:1,name:"Améliorer la cybersécurité",url:"./zero-trust.html"

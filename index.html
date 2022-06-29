@@ -144,7 +144,7 @@
                                 x-transition:leave="transition ease-in duration-100"
                                 x-transition:leave-end="opacity-0"
                                 x-transition:leave-start="opacity-100">
-                            <template :key="id" x-for="[id, value] in Object.entries($store.listboxData.items)">
+                            <template :  x-for="[id, value] in Object.entries($store.listboxData.items)">
                                 <li :class="{ 'text-white bg-gray-800': activeIndex === id, 'text-gray-900': !(activeIndex === id) }"
                                     :id="'listbox-option-' + id"
                                     @click="choose(id)"
