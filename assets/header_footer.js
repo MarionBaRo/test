@@ -38,7 +38,7 @@ var Liste_d_lien = "./index.html";
 
 function Liste_d_Onclick (i){
     var x = document.getElementById(i);
-    Liste_d_lien = x.url;
+    Liste_d_lien = "<a href = " +  x.url + `class="btn btn-primary"> Découvrir l'offre </a>`;
 };
 
 function Header(){
@@ -510,9 +510,7 @@ function Hero () {
                             </ul>
                         </div> 
                     </div> */
-                    document.write(`<a href = Liste_d_lien class="btn btn-primary">
-                        Découvrir l'offre \
-                    </a> \
+                    document.write(Liste_d_lien, ` \
                 </div> \
             </div> \
         </div> \
