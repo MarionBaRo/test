@@ -389,17 +389,16 @@ function Hero () {
 
                         for (var i=0; i < Liste_d.length; i++){
                             document.write('<option> \
-                                 :aria-expanded="open" \
-                                        @click="Liste_d_Onclick(', Liste_d[i].id,')" \
-                                        @click.outside="open = false" \
-                                        @keydown.arrow-down.stop.prevent="onButtonClick()" \
-                                        @keydown.arrow-up.stop.prevent="onButtonClick()" \
-                                        class="outline-none btn btn-white w-full flex" \
-                                        type="button" \
-                                        x-ref="button"> \
+                                <div :aria-expanded="open" \
+                                    class="outline-none btn btn-white w-full flex" \
+                                    @click="Liste_d_Onclick(', Liste_d[i].id,')" \
+                                    @click.outside="open = false" \
+                                    @keydown.arrow-down.stop.prevent="onButtonClick()" \
+                                    @keydown.arrow-up.stop.prevent="onButtonClick()" \
                                     <span class="block truncate" \
                                         ',Liste_d[i].name ,'\
                                     </span> \
+                                </div> \
                             </option>');
                         }
                         document.write('</select>');
