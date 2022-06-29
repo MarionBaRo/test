@@ -34,11 +34,10 @@ var Liste_d = [{
     id:4,name:"Test",url:"./test.html"
   }];
 
-var Liste_d_lien = `<a href = ./index.html class="btn btn-primary"> Découvrir l'offre </a>`;
-
 function Liste_d_Onclick (i){
     var x = document.getElementById(i);
-    Liste_d_lien = "<a href = " +  x.url + `class="btn btn-primary"> Découvrir l'offre </a>`;
+    var y = document.getElementById(liste_dbtn);
+    y.href = x.url;
 };
 
 function Header(){
@@ -510,7 +509,7 @@ function Hero () {
                             </ul>
                         </div> 
                     </div> */
-                    document.write(Liste_d_lien, ` \
+                    document.write(`<a id = "liste_dbtn" href = ./index.html class="btn btn-primary"> Découvrir l'offre </a> \
                 </div> \
             </div> \
         </div> \
