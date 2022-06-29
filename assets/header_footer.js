@@ -34,7 +34,7 @@ var Liste_d = [{
     id:4,name:"Test",url:"./test.html"
   }];
 
-var Liste_d_lien = "#";
+var Liste_d_lien = "./index.html";
 
 function Liste_d_Onclick (i){
     var x = document.getElementById(i);
