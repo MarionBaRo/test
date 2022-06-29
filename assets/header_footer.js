@@ -403,27 +403,7 @@ function Hero () {
                                 </button> \
                             </option>');
                         }
-                            /*
-                            <option value = "./zero-trust.html"> 
-                                <span class="block truncate"
-                                    x-text="selected.name">
-                                    Améliorer la cybersécurité
-                            </span> 
-                            </option>
-                            <option value = "./entreprise-networking.html"> 
-                                <span class="block truncate"
-                                    x-text="selected.name">
-                                    Bénéficier d'un réseau performant et sécurisé
-                                </span>
-                            </option>
-                            <option value = "./digital-workspace.html"> 
-                                <span class="block truncate"
-                                    x-text="selected.name">
-                                    Intégrer des services collaboratifs
-                                </span>
-                            </option>
-                        
-                        </select>
+                        document.write('</select>');
                         /*</div>
                         </div><div>
                             <button :aria-expanded="open"
@@ -514,9 +494,9 @@ function Hero () {
                                     </li>
                                 </template>
                             </ul>
-                        </div> 
-                    </div> */
-                    document.write(`<a id = "liste_dbtn" href = ./index.html class="btn btn-primary"> Découvrir l'offre </a> \
+                        </div> */
+                    document.write(`</div> \
+                    <a id = "liste_dbtn" href = ./index.html class="btn btn-primary"> Découvrir l'offre </a> \
                 </div> \
             </div> \
         </div> \
