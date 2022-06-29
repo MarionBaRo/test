@@ -509,12 +509,12 @@ function Hero () {
                                 </template>
                             </ul>
                         </div> 
-                    </div> 
-                    <a x-bind:href = {Liste_d_lien} class="btn btn-primary">
-                        Découvrir l'offre
-                    </a>*/
-                document.write('</div> \
+                    </div> */
+                    document.write(`<a x-bind:href = {Liste_d_lien} class="btn btn-primary">
+                        Découvrir l'offre \
+                    </a> \
+                </div> \
             </div> \
         </div> \
-    </section>');
+    </section>`);
 };
