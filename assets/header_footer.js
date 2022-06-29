@@ -1,17 +1,21 @@
+//Ensemble des catégories :
 var Acceuil = {nom : "Acceuil", href : "./index.html" , id : ""};
 var Expertise = {nom : "Expertise", href : "./expertise.html" , id : ""};
 var Contact = {nom : "Nous Contacter", href : "", id : "contact"};
 var Rejoindre = {nom : "Nous Rejoindre", href : "./careers.html" , id : ""};
-var Test = {nom : "Test", href : "./test.html" , id : ""};
 
+//Liste du footer
 var Liste = [Acceuil, Expertise, Contact, Rejoindre];
-var Bouton = [Expertise, Test];
+//Boutons de l'header
+var Bouton = [Expertise];
 
 var Service = [{
     nom : "Security Zero Trust", href : "./zero-trust.html", cat : "security", type : "Cybersécurité" },{
     nom : "Entreprise Networking", href : "./entreprise-networking.html", cat : "network", type : "Réseau" },{
     nom : "Digital Workspace", href : "./digital-workspace.html", cat : "infrastructure-cloud", type : "Infrastructure" }
 ];
+
+//Bouton déroulant :
 var Bouton_d = [{
     nom : "Services managés", liste : Service, fin : "Pour un service sur mesure, contactez nos conseillers."}
 ];
@@ -22,6 +26,8 @@ var Adresse = [{
     lieu : "445 Rue Lavoisier, 38330 Montbonnot-Saint-Martin (France)", lien : "https://www.google.com/maps/place/445+Rue+Lavoisier,+38330+Montbonnot-Saint-Martin/data=!4m2!3m1!1s0x478a5f45485db821:0x18a1f2312e8d685c?sa=X&ved=2ahUKEwi8mdGe2Jr0AhUHxoUKHYJ1AMEQ8gF6BAgTEAE" }
 ];
 
+//Variable du Menu déroulant
+/*
 var Liste_d = [{
     id:0,name:"-- Quel est votre enjeu ? --",url:"#"
   },{
@@ -38,7 +44,7 @@ function Liste_d_Onclick (i){
     var x = document.getElementById(i);
     var y = document.getElementById(liste_dbtn);
     y.href = x.url;
-};
+};*/
 
 function Header(){
     document.write('<header class="z-40 relative bg-white" \
@@ -373,6 +379,8 @@ function Modal () {
     </div>`);
 };
 
+//Fonction pour le menu déroulant de l'index mais ne fonctionne pas
+/*
 function Hero () {
     //Titre
     document.write('<section class="mt-9 sm:mt-16 px-4"> \
@@ -492,11 +500,11 @@ function Hero () {
                                     </li>
                                 </template>
                             </ul>
-                        </div> */
+                        </div> 
                     document.write(`</div> \
                     <a id = "liste_dbtn" href = ./index.html class="btn btn-primary"> Découvrir l'offre </a> \
                 </div> \
             </div> \
         </div> \
     </section>`);
-};
+};*/
