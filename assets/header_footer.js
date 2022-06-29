@@ -389,8 +389,7 @@ function Hero () {
 
                         for (var i=0; i < Liste_d.length; i++){
                             document.write('<option value = "liste"> \
-                                <div :aria-expanded="open" \
-                                    class="outline-none btn btn-white w-full flex" \
+                                <div class="outline-none btn btn-white w-full flex" \
                                     @click="Liste_d_Onclick(', Liste_d[i].id,')" \
                                     @click.outside="open = false" \
                                     @keydown.arrow-down.stop.prevent="onButtonClick()" \
