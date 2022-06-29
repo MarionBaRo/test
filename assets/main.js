@@ -1,4 +1,5 @@
 //Fonctions du menu déroulant
+//Pour rajouter un élément, rajouter le à la suite dans la listboxData
 
 var e=Object.defineProperty,t=Object.getOwnPropertySymbols,n=Object.prototype.hasOwnProperty,i=Object.prototype.propertyIsEnumerable,o=(t,n,i)=>n in t?e(t,n,{
   enumerable:!0,configurable:!0,writable:!0,value:i
@@ -216,8 +217,6 @@ window.Components={},window.Components.listbox=function(e){
     id:2,name:"Bénéficier d'un réseau performant et sécurisé",url:"./entreprise-networking.html"
   },{
     id:3,name:"Intégrer des services collaboratifs",url:"./digital-workspace.html"
-  },{
-    id:4,name:"Test",url:"./test.html"
   }]
 },!0),s.start();
 const c=document.querySelector("[data-confetti]");
